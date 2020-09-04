@@ -7,6 +7,7 @@ import {
 } from "@reach/accordion";
 //import "@reach/accordion/styles.css";
 import './Accordion.css'
+import tableView from './tableView/tableView'
 
 
 export default class ExplainAccordion extends React.Component {
@@ -36,16 +37,8 @@ export default class ExplainAccordion extends React.Component {
                         <AccordionPanel>
                             <p>{this.props.extraDescriptionText}</p>
                             <p>
-                            
-                                <div className="row">
-
-                                    <div className="column">
-                                        <ul>
-                                           {this.props.vocabArray}
-                                        </ul>
-                                    </div>
-                                    
-                                </div>    
+                             {this.props.tableView}
+                               
                             </p>
                         </AccordionPanel>
                     </AccordionItem>
