@@ -1,0 +1,55 @@
+.Home {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+}
+
+.rectangleInfo {
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.rectangle1 {
+    background: #C4C4C4;
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.rectangle2 {
+    background: #C4C4C4;
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.HowItWorks {
+    align-content: center;
+    justify-content: center;
+}
+
+.SatirInfo {
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.SatirImage {
+    background: #C4C4C4;
+    height: 250px;
+    width: 250px;
+    float: right;
+    margin-bottom: 40px;
+}
+
+.VirginiaSatir {
+    text-align: left;
+    height: 250px;
+    width: 250px;
+    margin-left: 20px;
+}

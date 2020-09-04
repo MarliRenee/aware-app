@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter as Router } from "react-router-dom";
+import Home from "./Components/Home/Home";
+import Iceberg from "./Components/Iceberg/Iceberg";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import Login from "./Components/Login/Login";
+
+import NavBar from "./Components/NavBar/Navbar";
+
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <main className='App'>
+        <NavBar />
+      </main>
+
+      <Route exact path="/"  component={Home} />
+      <Route path="/iceberg" component={Iceberg} />
+      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/login" component={Login} />
+
+    </Router>
+    
   );
 }
 

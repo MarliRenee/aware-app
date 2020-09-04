@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif; 
+    color: #444;
+    text-align: center;
+    margin: 20px;
+}
+
+.logo {
+    float: left;
+}
+
+.menu {
+    float: right;
+}
+
+nav {
+    display: block;
+}
+nav li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+button {
+    border: 0;
+    width: 120px;
+    height: 40px;
+    left: 100px;
+    top: 220px; 
+    text-transform: uppercase;
+    background: #C4C4C4;
+}    
+
+header {
+    padding-top: 20%;
+}
+
+section {
+    min-height: 200px;
+    padding: 6% 0;
+}
+
+.TellMeMore {
+    display: inline;
+    text-align: left;
+}
+
+.Title {
+    text-align: left;
+}
+
+.Question {
+    text-align: left;
+}
+
+.Answer {
+    display: block;
+}
+
+.helpButton {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    float: left;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.QandA_Button {
+    border: 0;
+    width: 90px;
+    height: 25px;
+    left: 100px;
+    top: 220px; 
+    text-transform: uppercase;
+    background: #C4C4C4;
+    float: right;
+    font-size: 12px;
+}
+
+textarea {
+    margin: 0;
+    width:100%;
+    min-height:150px; 
+    font-family: "Open Sans", sans-serif; 
+    color: #444;
+    font-size: 12px;
+}
+
+.VocabHelp {
+    text-align: left;
+}
+  
