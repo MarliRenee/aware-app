@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import './QuestionBox.css'
 import quizService from '../Iceberg/QuizService'
-import ExplainAccordion from './Accordion/Accordion'
+import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
 
 export default class QuestionBox extends Component {
   
@@ -26,7 +26,11 @@ export default class QuestionBox extends Component {
                             <h3>{answers}</h3>
 
                             <div className="Accordion"> 
-                                <ExplainAccordion extraDescription={extraDescription} extraDescriptionText={extraDescriptionText} />
+                                <ExplainAccordion 
+                                    extraDescription={extraDescription} 
+                                    extraDescriptionText={extraDescriptionText} 
+
+                                />
                             </div>
 
                             <div className="textArea">
@@ -34,7 +38,11 @@ export default class QuestionBox extends Component {
                             </div>
 
                             <div className="Accordion"> 
-                                <ExplainAccordion vocabTitle={vocabTitle} vocabArray={vocabArray}/>
+                                <ExplainAccordion 
+                                    vocabTitle={vocabTitle} 
+                                    extraDescriptionText={extraDescriptionText}
+
+                                />
                             </div>
 
 
