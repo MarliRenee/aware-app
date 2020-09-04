@@ -1,0 +1,22 @@
+
+.column {
+    float: left;
+    width: 25%;
+    margin-bottom: 20px;
+    margin: 12px;
+  }
+  .row {
+    display:block;
+  }  
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  

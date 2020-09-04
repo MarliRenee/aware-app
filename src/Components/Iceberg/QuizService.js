@@ -6,9 +6,9 @@ const qBank = [
       extraDescriptionText: "Lots of helpful extra descriptions... Wordy word words",
       vocabTitle: "Vocab Help",
       vocabArray:[
-        "Ecstatic",
-        "Crestfallen",
-        "Confused"
+        ["Ecstatic", "Crestfallen", "Confused"],
+        ["Sad", "Happy", "Mad"],
+        ["Discouraged", "Intimidated", "Bright"],
       ],
       questionId: "099099"
     },
