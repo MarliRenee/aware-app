@@ -2,16 +2,39 @@ import React, {Component} from 'react'
 
 export default class TableView extends Component {
   
+    rendertableView() {
+        return this.props.data.map(
+            ({vocabArray}) => {
+            return (
+                <ul>
+                    <li>{vocabArray}</li>
+                </ul>
+            
+            )
+        }) 
+    }
 
-  render() {
+    render() {
+        return (
+            <div>
+                <div>
+                    {this.rendertableView}
+                </div>
+                <div>
+                    {this.props.data}
+                </div>
+            </div>
+           
+        )
 
-    return (
-        <div>TEST</div>  
-    )
-  }
+
+    }
 } 
 
-// use this.props.data
+// this.state.questionBank.map(
+//     ({question, answers, questionId, extraDescription, extraDescriptionText, vocabTitle, vocabArray}) => (
+
+// use 
 
 
 {/* <div className="row">

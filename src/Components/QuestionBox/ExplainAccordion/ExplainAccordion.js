@@ -7,16 +7,11 @@ import {
 } from "@reach/accordion";
 //import "@reach/accordion/styles.css";
 import './Accordion.css'
-import TableView from './ExplainAccordion/tableView/tableView'
+import TableView from './tableView/tableView'
 
 
 export default class ExplainAccordion extends React.Component {
     render() {
-
-        // const vocabPrompts = this.props.vocabArray;
-        // const vocabList = vocabPrompts.map((vocabPrompts) =>
-        //     <li>{vocabPrompts}</li>
-        // );
 
         return (
             
