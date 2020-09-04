@@ -1,0 +1,34 @@
+.AccordionText {
+  background-color:transparent;
+  text-transform: none;
+  font-size: 12px;
+}
+
+.helpButton {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  float: left;
+  background-color: lightgray;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 20px;
+  margin: 12px;
+}
+.row {
+  display:block;
+}  
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
