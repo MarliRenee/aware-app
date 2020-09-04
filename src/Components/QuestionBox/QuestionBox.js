@@ -41,7 +41,7 @@ export default class QuestionBox extends Component {
                             <div className="Accordion"> 
                                 <ExplainAccordion 
                                     vocabTitle={vocabTitle} 
-                                    vocabArray={vocabArray}
+                                    vocabArray={vocabArray} 
                                 />
                             </div>
 

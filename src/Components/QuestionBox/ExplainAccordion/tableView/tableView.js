@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-export default class tableView extends Component {
+export default class TableView extends Component {
   
 
   render() {
@@ -10,6 +10,8 @@ export default class tableView extends Component {
     )
   }
 } 
+
+// use this.props.data
 
 
 {/* <div className="row">

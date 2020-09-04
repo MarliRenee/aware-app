@@ -7,7 +7,7 @@ import {
 } from "@reach/accordion";
 //import "@reach/accordion/styles.css";
 import './Accordion.css'
-import tableView from './tableView/tableView'
+import TableView from './ExplainAccordion/tableView/tableView'
 
 
 export default class ExplainAccordion extends React.Component {
@@ -36,10 +36,9 @@ export default class ExplainAccordion extends React.Component {
                             </AccordionButton>
                         <AccordionPanel>
                             <p>{this.props.extraDescriptionText}</p>
-                            <p>
-                             {this.props.tableView}
-                               
-                            </p>
+
+                            <TableView data={(this.props.vocabArray)} /> 
+
                         </AccordionPanel>
                     </AccordionItem>
                 </Accordion>
@@ -47,29 +46,3 @@ export default class ExplainAccordion extends React.Component {
     }
     
 }
-
-// ({question, answers, questionId}) => (
-//     <div className="IndividualQuestion">
-//         <h2>{question}</h2> 
-//         <h3>{answers}</h3>
-
-//         <div className="Accordion"> 
-//             <ExplainAccordion title="Tell Me More"/>
-//         </div>
-
-//         {/* <textarea></textarea> */}
-
-//         <div className="VocabHelp">
-//             <button className="helpButton">
-//                 ?
-//             </button>
-//             <p>Vocab Inspiration</p>
-//         </div>
-
-//         <button className="QandA_Button">
-//             Submit
-//         </button>
-//     </div> 
-    
-// )
-// )}
