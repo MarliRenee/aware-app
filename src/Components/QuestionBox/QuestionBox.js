@@ -40,7 +40,7 @@ export default class QuestionBox extends Component {
                             <div className="Accordion"> 
                                 <ExplainAccordion 
                                     vocabTitle={vocabTitle} 
-                                    extraDescriptionText={extraDescriptionText}
+                                    vocabArray={vocabArray}
 
                                 />
                             </div>
