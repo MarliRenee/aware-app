@@ -1,27 +1,27 @@
 import React, {Component} from 'react'
 
 export default class TableView extends Component {
-  
-    rendertableView() {
-        return this.props.data.map(
-            ({vocabArray}) => {
-            return (
-                <ul>
-                    <li>{vocabArray}</li>
-                </ul>
-            
-            )
-        }) 
-    }
 
+    // rendertableView() {
+    //     return this.props.data.map(
+    //         ({vocabArray}) => {
+    //         return (
+    //             <ul>
+    //                 <li>{vocabArray}</li>
+    //             </ul>
+            
+    //         )
+    //     }) 
+    // }
+  
     render() {
+        console.log(this.props)
+
         return (
-            <div>
+            <div classname="tableView">
+               
                 <div>
-                    {this.rendertableView()}
-                </div>
-                <div>
-                    {this.props.data}
+                   <p>{this.props.data}</p> 
                 </div>
             </div>
            
@@ -31,12 +31,30 @@ export default class TableView extends Component {
     }
 } 
 
-{/* <div className="row">
+// {this.state.questionBank.length > 0 && 
+//                     this.state.questionBank.map(
+//                     ({vocabArray}) => (
+//                         <div className="EmotionsList">
+//                             <h2>{vocabArray}</h2> 
+//                         </div> 
+                        
+//                     )
+//                 )}
+               
+//                <div>
+//                     {emotions.map(function(d, idx){
+//                         return (<li key={idx}>{d.vocabArray}</li>)
+//                     })}
+//                 </div>
 
-<div className="column">
-    <ul>
-    <li>TEST</li>
-    </ul>
-</div>
+// {this.rendertableView()}
 
-</div>   */}
+// <div className="row">
+
+//     <div className="column">
+//         <ul>
+//         <li>TEST</li>
+//         </ul>
+//     </div>
+
+// </div> 

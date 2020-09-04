@@ -32,7 +32,7 @@ export default class ExplainAccordion extends React.Component {
                         <AccordionPanel>
                             <p>{this.props.extraDescriptionText}</p>
 
-                            <TableView data={(this.props.vocabArray)} /> 
+                            <TableView  data={(this.props.vocabArray)}/> 
 
                         </AccordionPanel>
                     </AccordionItem>
