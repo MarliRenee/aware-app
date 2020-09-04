@@ -6,12 +6,13 @@ const qBank = [
       extraDescriptionText: "Lots of helpful extra descriptions... Wordy word words",
       vocabTitle: "Vocab Help",
       vocabArray:[
-        {Happy: ["Ecstatic", "Thrilled", "Excited"]},
+        ["Ecstatic", "Thrilled", "Excited"],
         ["Sad", "Happy", "Mad"],
         ["Discouraged", "Intimidated", "Bright"],
       ],
       questionId: "099099"
     },
+
     {
       question:"2. Thoughts",
       answers: "Intellectual activity...This can include reasoning, ruminating, remembering, problem solving, evaluating, etc.",
