@@ -18,7 +18,7 @@ export default class TableView extends Component {
         return (
             <div>
                 <div>
-                    {this.rendertableView}
+                    {this.rendertableView()}
                 </div>
                 <div>
                     {this.props.data}
@@ -30,12 +30,6 @@ export default class TableView extends Component {
 
     }
 } 
-
-// this.state.questionBank.map(
-//     ({question, answers, questionId, extraDescription, extraDescriptionText, vocabTitle, vocabArray}) => (
-
-// use 
-
 
 {/* <div className="row">
 
