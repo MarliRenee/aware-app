@@ -4,18 +4,17 @@ import './tableView.css'
 
 export default class TableView extends Component {
     
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //       data: this.props.vocabArray,
-    //     };
-    // }
-
     render() {
         
         console.log(this.props.data);
-        const data = this.props.data;
 
+
+        data.map(function(subarray) {
+            return subarray.map(function(emotion) {
+                return 
+                    <li>{emotion}</li>;
+            })
+        })
     
         return (
             <div classname="tableView">
@@ -23,8 +22,12 @@ export default class TableView extends Component {
             <div className="row">
                     
                     <div className="column">
+                        
+
+                    { (this.props.data) ? this.props.data.map(d => <li><p>{this.props.data[0]}</p></li>) : null }
+
                         <ul>
-                            {this.props.data.map(d => <li>{d.vocabArray}</li>)}
+                             
                         </ul>
                     </div>
                     <div className="column">
