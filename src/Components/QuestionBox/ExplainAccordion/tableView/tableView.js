@@ -8,22 +8,21 @@ export default class TableView extends Component {
     render() {
         
         console.log(this.props.data);
-        // qBank[0].vocabArray[0]];
 
         return (
             <div className="tableView">
 
-            <div className="row">
+                <div className="row">
 
-                    {/* {(this.props.data) ?
+                    {/* {this.props.data.length > 0 &&
                         this.props.data.map(
-                        (({vocabArray}) => (
+                        (vocabArray => (
                             <div className="column">
                                 { (this.props.data) ? this.props.data.map(
                                     <li><p>{vocabArray[0]}</p></li>
                                 ) : null }  
                             </div>
-                        )) : null 
+                        )) 
                     }; */}
 
             
