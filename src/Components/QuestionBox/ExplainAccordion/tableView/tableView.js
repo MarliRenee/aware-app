@@ -14,18 +14,25 @@ export default class TableView extends Component {
 
                 <div className="row">
 
-                    {/* {this.props.data.length > 0 &&
+                    {this.props.data.length > 0 &&
                         this.props.data.map(
                         (vocabArray => (
                             <div className="column">
-                                { (this.props.data) ? this.props.data.map(
-                                    <li><p>{vocabArray[0]}</p></li>
-                                ) : null }  
+                                { this.props.data.length > 0 &&
+                                    this.props.data.map(
+                                        <li><p>{vocabArray[0]}</p></li>
+                                    )
+                                }  
                             </div>
                         )) 
-                    }; */}
+                    )}
 
             
+                    <div className="column">
+                        <ul>
+                            <li><p>{this.props.data}</p></li>
+                        </ul>
+                    </div>
                     <div className="column">
                         <ul>
                             <li><p>{this.props.data}</p></li>
