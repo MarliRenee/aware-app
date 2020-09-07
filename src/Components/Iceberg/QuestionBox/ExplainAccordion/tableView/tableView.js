@@ -12,6 +12,7 @@ export default class TableView extends Component {
 
         return (
             <div className="tableView">
+                <div>Vocab word promps coming soon :)</div>
                 {/* PLACEHOLDER */}
                 <div class="row">
                     <div class="column">

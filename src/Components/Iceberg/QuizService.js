@@ -5,10 +5,10 @@ const qBank = [
       TellMeMore: "Tell me more...",
       TellMeMoreText: "Lots of helpful extra descriptions... Wordy word words",
       vocabTitle: "Vocab Help",
-      vocabArray:[
-        ["Ecstatic", "Thrilled", "Excited"],
-        ["Sad", "Happy", "Mad"],
-        ["Discouraged", "Intimidated", "Bright"],
+      vocabArray:[ "Vocab Word prompts coming soon :) "
+        // ["Ecstatic", "Thrilled", "Excited"],
+        // ["Sad", "Happy", "Mad"],
+        // ["Discouraged", "Intimidated", "Bright"],
       ],
       questionId: "1"
     },
@@ -19,6 +19,7 @@ const qBank = [
       TellMeMore: "Tell me more...",
       TellMeMoreText: "Lots of helpful extra descriptions... Wordy word words",
       vocabTitle: "Vocab Help",
+      vocabArray:"Vocab Word prompts coming soon :) ",
       questionId: "2"
     },
     {
@@ -27,6 +28,7 @@ const qBank = [
       TellMeMore: "Tell me more...",
       TellMeMoreText: "Lots of helpful extra descriptions... Wordy word words",
       vocabTitle: "Vocab Help",
+      vocabArray:"Vocab Word prompts coming soon :) ",
       questionId: "3"
     },
     {
@@ -34,6 +36,8 @@ const qBank = [
       answers: "Built from our collection of behaviors, thoughts, and feelings that have already occurred in our environment",
       TellMeMore: "Tell me more...",
       TellMeMoreText: "Lots of helpful extra descriptions... Wordy word words",
+      vocabTitle: "Vocab Help",
+      vocabArray:"Vocab Word prompts coming soon :) ",
       questionId: "4"
     },
     {
@@ -42,6 +46,7 @@ const qBank = [
       TellMeMore: "Tell me more...",
       TellMeMoreText: "Lots of helpful extra descriptions... Wordy word words",
       vocabTitle: "Vocab Help",
+      vocabArray:"Vocab Word prompts coming soon :) ",
       questionId: "5"
     },
     {
@@ -50,6 +55,7 @@ const qBank = [
       TellMeMore: "Tell me more...",
       TellMeMoreText: "Lots of helpful extra descriptions... Wordy word words",
       vocabTitle: "Vocab Help",
+      vocabArray:"Vocab Word prompts coming soon :) ",
       questionId: "6"
     },
     {
@@ -58,6 +64,7 @@ const qBank = [
       TellMeMore: "Tell me more...",
       TellMeMoreText: "Lots of helpful extra descriptions... Wordy word words",
       vocabTitle: "Vocab Help",
+      vocabArray:"Vocab Word prompts coming soon :) ",
       questionId: "7"
     },
 ];

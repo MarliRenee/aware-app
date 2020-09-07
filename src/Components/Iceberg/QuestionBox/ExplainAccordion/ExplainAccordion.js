@@ -31,7 +31,7 @@ export default class ExplainAccordion extends React.Component {
                             </AccordionButton>
                         <AccordionPanel>
                             <p>{this.props.TellMeMoreText}</p>
-                            {/* <p>{this.props.vocabArray}</p> */}
+                            <p>{this.props.vocabArray}</p>
 
                             {/* <TableView  data={(this.props.vocabArray)}/> 
                             TO IMPLEMENT in TABLE IF GRABBING FROM SERVICE ARRAY */}
