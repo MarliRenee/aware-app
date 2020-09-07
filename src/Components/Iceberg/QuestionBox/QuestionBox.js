@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './QuestionBox.css'
-import quizService from '../Iceberg/QuizService'
+import quizService from '../QuizService'
 import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
 import TableView from './ExplainAccordion/tableView/tableView';
 import End from './End/End'

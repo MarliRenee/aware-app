@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Iceberg.css";
-import QuestionBox from "../QuestionBox/QuestionBox.js"
+import QuestionBox from "./QuestionBox/QuestionBox.js"
 
 export default class Iceberg extends Component {
   constructor(props) {

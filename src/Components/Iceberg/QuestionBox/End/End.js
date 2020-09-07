@@ -8,7 +8,10 @@ export default class End extends Component {
             <section className="End">
                     <h2>You made it. Well done.</h2>
                     <p>
-                    When you can know your self, you can better communicate who you are to others and become more congruent. Being congruent allows you to choose behaviors that reflect more of your authentic internal experiencing.
+                    When you know your self, you can better communicate who you are to others. You can choose behaviors that reflect more of your authentic internal experience. You can compare your internal experience with your understanding of reality, and work to align the two.
+                    </p>
+                    <p>
+                    You are valuable, loved and deserve to be whole.  
                     </p>
                 
                 <div className="EndButtons">
