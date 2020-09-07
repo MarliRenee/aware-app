@@ -21,11 +21,16 @@ button {
     top: 220px; 
     text-transform: uppercase;
     background: #C4C4C4;
+    margin: 10px;
+    font-size: 14px;
+
 }   
 
 .linkButton {
    text-align: center;
    display: inline-flex;
+   margin: 10px;
+   font-size: 14px;
 }
 
 .linkButton a {
@@ -33,6 +38,7 @@ button {
     text-transform: uppercase;
     background: #C4C4C4;
     padding: 10px;
+    height: 40px;
 }
 
 section {
