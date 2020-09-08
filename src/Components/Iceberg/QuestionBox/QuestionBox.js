@@ -54,7 +54,7 @@ export default class QuestionBox extends Component {
                     
                     {this.state.questionBank.length > 0 && 
                         this.state.questionBank.slice(0, this.state.count).map(
-                        ({level, question, order, TellMeMoreText, vocabArray}) => (
+                        ({level, question, example, TellMeMoreText, vocabArray}) => (
                             <div className="IndividualQuestion">
                                 <h2>{level}</h2> 
                                 <h3>{question}</h3>
@@ -64,7 +64,7 @@ export default class QuestionBox extends Component {
                                 />
 
                                 <div className="textArea">
-                                    <textarea></textarea>
+                                    <textarea>{example}</textarea>
                                 </div>
 
 
