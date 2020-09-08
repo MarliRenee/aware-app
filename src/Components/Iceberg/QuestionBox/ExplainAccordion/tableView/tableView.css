@@ -1,9 +1,8 @@
 
 .column {
     float: left;
-    width: 25%;
     margin-bottom: 20px;
-    margin: 12px;
+    margin-right: 25px;
   }
 
 .row {
@@ -24,5 +23,10 @@ ul {
   content: "";
   display: table;
   clear: both;
+}
+
+.column li {
+  float: none;
+  line-height: .25em;
 }
   
