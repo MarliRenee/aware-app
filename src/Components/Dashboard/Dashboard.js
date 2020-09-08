@@ -7,12 +7,12 @@ function Dashboard() {
         <body>
         <header>
           <h1>Welcome</h1>
-          <div class="linkButton">
+          <div className="linkButton">
             <a href="iceberg">New Iceberg</a>
           </div>
         </header>
 
-        <section class="Archive">
+        <section className="Archive">
           <h2>Past Journeys</h2>
           <ArchiveIceberg />
           <ArchiveIceberg />

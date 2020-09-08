@@ -36,9 +36,10 @@ const ValidatedLoginForm = () => (
       } = props;
 
       return (
+
         <form onSubmit={handleSubmit}>
+          <label htmlFor="username">Username:</label>
           <div className="username">
-            <label htmlFor="username">Username:</label>
             <input
               name="username"
               type="text"
@@ -53,8 +54,8 @@ const ValidatedLoginForm = () => (
             )}
           </div>
           
+          <label htmlFor="password">Password:</label>
           <div className="Password">
-            <label htmlFor="password">Password:</label>
             <input
               name="password"
               type="password"
@@ -71,7 +72,7 @@ const ValidatedLoginForm = () => (
           </div>
 
               
-          <div type="submit" class="linkButton" disabled={isSubmitting}>
+          <div type="submit" className="linkButton" disabled={isSubmitting}>
                <a href="iceberg">Submit</a>
             </div>
         </form>

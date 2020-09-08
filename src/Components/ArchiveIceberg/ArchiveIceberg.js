@@ -5,7 +5,7 @@ function PastIceberg() {
   return (
     <main className='PastIceberg'>
       <p className="date">MM/DD/YY</p>
-      <p class="IcebergKey">[Saved Iceberg Title]</p>
+      <p className="IcebergKey">[Saved Iceberg Title]</p>
     </main>
   );
 }

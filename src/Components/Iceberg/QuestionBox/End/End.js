@@ -25,7 +25,7 @@ export default class End extends Component {
                    </div>
                     
 
-                    <div class="linkButton">
+                    <div className="linkButton">
                         <a href="iceberg">New Iceberg</a>
                     </div>
                 </div>
