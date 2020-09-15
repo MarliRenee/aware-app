@@ -50,7 +50,7 @@ export default function ValidatedRegistrationForm () {
           />
           <div>
             <button disabled={!validateForm()} type="submit">
-              Log In
+              Register
             </button>
           </div>
       </form>
