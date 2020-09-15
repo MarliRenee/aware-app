@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import config from '../../../config'
-import { Button } from '../../Utils/Utils'
+// import { Button } from '../../Utils/Utils'
 
 import './LoginRegister.css'
 
@@ -29,14 +29,7 @@ export default function ValidatedLoginForm () {
         }
       })
 
-      // if(
-      //   //check username
-      //   //check password
-      // )
-
-      // then(
-      //   //send to dashboard
-      // )
+      console.log(user)
     }
   
     return (
@@ -44,7 +37,6 @@ export default function ValidatedLoginForm () {
         <form onSubmit={handleSubmit}>
             <h3>Username</h3>
             <input
-              autoFocus
               type="text"
               value={username}
               onChange={e => setUsername(e.target.value)}
@@ -55,11 +47,15 @@ export default function ValidatedLoginForm () {
               onChange={e => setPassword(e.target.value)}
               type="password"
             />
+            <div>
+            <button disabled={!validateForm()} type="submit">
+              Log In
+            </button>
+            {/* send to dashboard if validated as user */}
+            </div>
+             
         </form>
-        <Button disabled={!validateForm()} type="submit">
-          Login
-        </Button>
-        {/* send to dashboard if validated as user */}
+       
   
       </div>
     );

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './QuestionBox.css'
 import quizService from '../QuizService'
 import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
-import TableView from './ExplainAccordion/tableView/tableView';
 import End from './End/End'
 
 
@@ -41,16 +40,6 @@ export default class QuestionBox extends Component {
           showQuestionBox: bool
         });
     }
-
-    // checkCount() {
-    //     alert('Hello!');
-    //     if (this.state.count > 3) {
-    //         this.setState({ showEnd: true})
-    //     }
-    //     else {
-    //         this.setState({ showEnd: false})
-    //     }
-    // }
 
     render() {
 
@@ -93,7 +82,6 @@ export default class QuestionBox extends Component {
                                     onClick={() => {
                                         console.log(this.state.count)
                                         this.setState({ count: this.state.count + 1 });
-                                        // this.setState({showEnd: true})
 
                                         if (this.state.count > 6) {
                                             this.setState({ showEnd: true})

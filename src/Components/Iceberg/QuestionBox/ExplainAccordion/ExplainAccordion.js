@@ -7,7 +7,6 @@ import {
 } from "@reach/accordion";
 //import "@reach/accordion/styles.css";
 import './Accordion.css'
-import TableView from './tableView/tableView'
 
 
 export default class ExplainAccordion extends React.Component {

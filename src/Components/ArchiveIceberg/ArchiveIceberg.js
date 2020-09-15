@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
+// import { Link } from 'react-router-dom'
+// import { NiceDate } from '../Utils/Utils'
+// import config from '../../config'
+// import IcebergListContext from '../../Contexts/IcebergListContext'
+// import IcebergApiService from '../../Services/iceberg-api-service'
+
 import "./ArchiveIceberg.css"
 
-function PastIceberg() {
-  return (
-    <main className='PastIceberg'>
-      <p className="date">MM/DD/YY</p>
-      <p class="IcebergKey">[Saved Iceberg Title]</p>
-    </main>
-  );
+export default class ArchiveIceberg extends Component {
+
+
+  render () {
+
+    return (
+      <div className="ArchiveIceberg">
+        <p>Date  - Placeholder for Icebergs</p>
+      </div>
+    )
+  }
+    
 }
 
-export default PastIceberg;

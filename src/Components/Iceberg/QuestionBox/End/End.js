@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 import './End.css'
 
 
-export default class End extends Component {
+class End extends Component {
+
     render() {
         return (
+
             <section className="End">
                     <h2>You made it. Well done.</h2>
                     <p>
@@ -16,20 +19,21 @@ export default class End extends Component {
                 
                 <div className="EndButtons">
                     {/* //IF SIGNED IN, POSTS TO ARCHIVE */}
+
                     {/* //IF NOT SIGNED IN, DIRECTS TO SIGN IN/SIGN UP, THEN POSTS TO ARCHIVE */}
                     {/* Consider sign in as pop up so it doesn't direct away from the main page */}
-                   <div>
-                        <button>
-                            Save Iceberg
-                        </button>
-                   </div>
+                    <div className="linkButton">
+                        <Link to='/dashboard'>Save</Link>
+                    </div>
                     
 
-                    <div class="linkButton">
-                        <a href="iceberg">New Iceberg</a>
+                    <div className="linkButton">
+                        <Link to='/iceberg'>New Iceberg</Link>
                     </div>
                 </div>
             </section>
         )
     }
 }
+
+export default End;

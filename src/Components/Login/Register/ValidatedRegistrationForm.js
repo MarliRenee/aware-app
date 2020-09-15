@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import config from '../../../config'
-import { Button } from '../../Utils/Utils'
 
 import './LoginRegister.css'
 
@@ -28,6 +27,9 @@ export default function ValidatedRegistrationForm () {
       }
     })
     console.log(user)
+
+
+    
   }
 
   return (
@@ -46,11 +48,12 @@ export default function ValidatedRegistrationForm () {
             onChange={e => setPassword(e.target.value)}
             type="password"
           />
+          <div>
+            <button disabled={!validateForm()} type="submit">
+              Log In
+            </button>
+          </div>
       </form>
-      <Button disabled={!validateForm()} type="submit">
-          Sign Up
-      </Button>
-
     </div>
   );
 

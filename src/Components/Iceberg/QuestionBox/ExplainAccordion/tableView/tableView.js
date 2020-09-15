@@ -13,8 +13,8 @@ export default class TableView extends Component {
         return (
             <div className="tableView">
                 {/* PLACEHOLDER */}
-                <div class="row">
-                    <div class="column">
+                <div className="row">
+                    <div className="column">
                         <ul>
                             <li>Ecstatic</li>
                             <li>Elated</li>
@@ -28,7 +28,7 @@ export default class TableView extends Component {
                         </ul>
                         
                     </div>
-                    <div class="column">
+                    <div className="column">
                         <ul>
                             <li>Awful</li>
                             <li>Blue</li>
@@ -41,7 +41,7 @@ export default class TableView extends Component {
                             <li>Fed up</li>
                         </ul>
                     </div>
-                    <div class="column">
+                    <div className="column">
                         <ul>
                             <li>Adrift</li>
                             <li>Ambivalent</li>
@@ -54,7 +54,7 @@ export default class TableView extends Component {
                             <li>Dizzy</li> 
                         </ul>
                     </div>
-                    <div class="column">
+                    <div className="column">
                         <ul>
                             <li>Annoyed</li>
                             <li>Antagonistic</li>

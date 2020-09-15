@@ -1,44 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ValidatedRegistrationForm from '../Login/Register/ValidatedRegistrationForm';
 import './Home.css'
 
-function Home() {
-  return (
-    <main className='Home'>
-     
+export default class Home extends Component {
 
-      <body>
+  render() {
+
+    return (
+      <main className='Home'>
+
         <header>
           <h1>Understand Your Emotions</h1>
           <h3>With simple prompts, the Iceberg Model will guide you to a greater understanding of yourself</h3>
-          <div class="linkButton">
+          <div className="linkButton">
             <a href="iceberg">explore</a>
           </div>
           
 
         </header>
 
-        <section class="About">
+        <section className="About">
           <h2>A cognitive behavioral approach</h2>
           <h3>Clarify your feelings, find instigating triggers and zero in on core beliefs.</h3>
-          <div class="rectangleInfo">
-              <div class="rectangle1">
+          
+          <h2>Register</h2>
+          <ValidatedRegistrationForm />
+          
+          <div className="rectangleInfo">
+              <div className="rectangle1">
                   <h3>Easy to Use</h3>
                   <p>One journey through seven simple levels</p>
               </div>
-              <div class="rectangle2">
+              <div className="rectangle2">
                   <h3>Easy to Return</h3>
                   <p>Review for insight into behavior patterns</p>
               </div>
           </div>
         </section>
 
-        <section class="HowItWorks">
+        <section className="HowItWorks">
           <h1>How It Works</h1>
-          <div class="SatirInfo">
-              <div class="SatirImage">
+          <div className="SatirInfo">
+              <div className="SatirImage">
                   <p>[Photo Placeholder]</p>
               </div>
-              <div class="VirginiaSatir">
+              <div className="VirginiaSatir">
                   <h2>The Mother of Family Therapy:</h2>
                   <h3>Virginia Satir</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel turpis elementum, porttitor risus sit amet, tempus enim. Phasellus pulvinar ipsum velit, dignissim ornare dolor venenatis eget.</p>
@@ -46,16 +52,12 @@ function Home() {
           </div>
         </section>
 
-        <div class="linkButton">
+        <div className="linkButton">
             <a href="iceberg">start demo</a>
         </div>
-        
-
-      </body>
-     
-
-    </main>
-  );
+      
+      </main>
+    );
+  }
+  
 }
-
-export default Home;
