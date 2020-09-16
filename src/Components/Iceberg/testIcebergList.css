@@ -1,0 +1,10 @@
+.IcebergArchive {
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin: 5%;
+    display: flex;
+}
+
+.IcebergArchive li {
+    list-style: none;
+}

@@ -11,9 +11,8 @@ export default class TableView extends Component {
 
         return (
             <div className="tableView">
-                <div className="row">
-                    
-                    {this.props.data.length > 0 &&
+                 
+                 {this.props.data.length > 0 &&
                         this.props.data.map(
                         (vocabArray => (
                             <div className="column">
@@ -29,8 +28,6 @@ export default class TableView extends Component {
                             </div>
                         )) 
                     )}
-
-                </div>
 
             </div>
         

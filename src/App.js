@@ -8,7 +8,7 @@ import NavBar from "./Components/NavBar/Navbar";
 import NotFoundPage from "./Components/NotFoundPage/NotFoundPage"
 
 import './App.css'
-import IcebergIdTest from './Components/Iceberg/testIcebergIDs';
+import IcebergIdTest from './Components/Iceberg/testIcebergList';
 
 class App extends Component {
 
