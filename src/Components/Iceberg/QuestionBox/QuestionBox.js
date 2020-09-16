@@ -3,6 +3,7 @@ import './QuestionBox.css'
 import quizService from '../QuizService'
 import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
 import End from './End/End'
+import "@reach/accordion/styles.css";
 
 
 export default class QuestionBox extends Component {
@@ -11,6 +12,7 @@ export default class QuestionBox extends Component {
         this.state = {
             questionBank: quizService,
             count: 1,
+            answer: '',
             showEnd: false
         };
     }
@@ -66,7 +68,10 @@ export default class QuestionBox extends Component {
                                 </div>
 
                                 <div className="textArea">
-                                    <textarea></textarea>
+                                    <textarea 
+                                        onChange={e => this.setState({ answer: e.target.value })}
+                                    >   
+                                    </textarea>
                                 </div>
 
                                 <div className="Accordion"> 
@@ -80,7 +85,8 @@ export default class QuestionBox extends Component {
                                 <button 
                                     className="QandA_Button" 
                                     onClick={() => {
-                                        console.log(this.state.count)
+
+                                        console.log('q' + this.state.count + ': ' + this.state.answer)
                                         this.setState({ count: this.state.count + 1 });
 
                                         if (this.state.count > 6) {

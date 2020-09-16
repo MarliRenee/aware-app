@@ -4,6 +4,7 @@ import config from '../../../config'
 import './LoginRegister.css'
 
 export default function ValidatedRegistrationForm () {
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -26,10 +27,11 @@ export default function ValidatedRegistrationForm () {
           'content-type': 'application/json',
       }
     })
+   //**NOTE TO SELF*** REDIRECT TO DASHBOARD
+
     console.log(user)
-
-
     
+
   }
 
   return (
