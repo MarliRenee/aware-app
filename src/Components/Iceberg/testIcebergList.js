@@ -21,7 +21,6 @@ export default class IcebergListTest extends Component {
         fetch(`${config.API_ENDPOINT}/icebergs`)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             this.setState({
                 listItems: data
             })

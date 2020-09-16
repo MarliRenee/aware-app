@@ -6,9 +6,9 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import ValidatedLoginForm from "./Components/Login/Register/ValidatedLoginForm";
 import NavBar from "./Components/NavBar/Navbar";
 import NotFoundPage from "./Components/NotFoundPage/NotFoundPage"
+import PastIceberg from "./Components/Iceberg/PastIceberg/PastIceberg"
 
 import './App.css'
-import IcebergIdTest from './Components/Iceberg/testIcebergList';
 
 class App extends Component {
 
@@ -39,10 +39,9 @@ class App extends Component {
 
             <Route 
               exact path={"/iceberg/:icebergId"}
-              component={Iceberg }
-              //add archive data to component
+              component={PastIceberg}
             />
-
+           
             <Route 
               exact path="/dashboard" 
               component={Dashboard}   
@@ -50,10 +49,6 @@ class App extends Component {
             <Route 
               exact path="/login" 
               component={ValidatedLoginForm}   
-            />
-             <Route 
-              exact path="/test" 
-              component={IcebergIdTest}   
             />
 
             <Route
