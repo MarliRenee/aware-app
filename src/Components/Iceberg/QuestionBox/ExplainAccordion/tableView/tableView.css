@@ -1,28 +1,31 @@
 
 .column {
-    float: left;
-    width: 25%;
-    margin-bottom: 20px;
-    margin: 12px;
-  }
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 25px;
+}
 
 .row {
-  display:block;
+display:block;
 }  
 
 .row ul {
-  font-size: 12px;
-  text-align: left;
+font-size: 12px;
+text-align: left;
 }
-  
+
 ul {
-  list-style: none;
-  padding: 0;
+list-style: none;
+padding: 0;
 }
-  /* Clear floats after the columns */
+/* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+content: "";
+display: table;
+clear: both;
 }
-  
+
+.column li {
+float: none;
+line-height: .25em;
+}

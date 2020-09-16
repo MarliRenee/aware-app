@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Iceberg from "./Components/Iceberg/Iceberg";
 import Dashboard from "./Components/Dashboard/Dashboard";
@@ -8,6 +8,7 @@ import NavBar from "./Components/NavBar/Navbar";
 import NotFoundPage from "./Components/NotFoundPage/NotFoundPage"
 
 import './App.css'
+import IcebergIdTest from './Components/Iceberg/testIcebergIDs';
 
 class App extends Component {
 
@@ -49,6 +50,10 @@ class App extends Component {
             <Route 
               exact path="/login" 
               component={ValidatedLoginForm}   
+            />
+             <Route 
+              exact path="/test" 
+              component={IcebergIdTest}   
             />
 
             <Route

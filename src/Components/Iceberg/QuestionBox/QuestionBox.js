@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import './QuestionBox.css'
-import quizService from '../QuizService'
+import questionService from '../QuestionService'
 import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
+import TableView from './ExplainAccordion/tableView/tableView';
 import End from './End/End'
-import "@reach/accordion/styles.css";
 
 
 export default class QuestionBox extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            questionBank: quizService,
+            questionBank: questionService,
             count: 1,
-            answer: '',
             showEnd: false
         };
     }
@@ -43,6 +42,7 @@ export default class QuestionBox extends Component {
         });
     }
 
+
     render() {
 
        
@@ -54,49 +54,38 @@ export default class QuestionBox extends Component {
                     
                     {this.state.questionBank.length > 0 && 
                         this.state.questionBank.slice(0, this.state.count).map(
-                        ({question, answers, questionId, TellMeMore, TellMeMoreText, vocabTitle, vocabArray}) => (
+                        ({level, question, example, TellMeMoreText, vocabArray}) => (
                             <div className="IndividualQuestion">
-                                <h2>{question}</h2> 
-                                <h3>{answers}</h3>
-
-                                <div className="Accordion"> 
-                                    <ExplainAccordion 
-                                        TellMeMore={TellMeMore} 
-                                        TellMeMoreText={TellMeMoreText} 
-
-                                    />
-                                </div>
+                                <h2>{level}</h2> 
+                                <h3>{question}</h3>
+                                <ExplainAccordion 
+                                    title={"Tell Me More"} 
+                                    body={TellMeMoreText}
+                                />
 
                                 <div className="textArea">
-                                    <textarea 
-                                        onChange={e => this.setState({ answer: e.target.value })}
-                                    >   
-                                    </textarea>
+                                    <textarea>{example}</textarea>
                                 </div>
 
-                                <div className="Accordion"> 
-                                    <ExplainAccordion 
-                                        vocabTitle={vocabTitle} 
-                                        vocabArray={vocabArray} 
-                                    />
-                                </div>
+
+                                <ExplainAccordion 
+                                    title={"Vocab Help"} 
+                                    body={<TableView data={(vocabArray)}/>}
+                                />
 
 
                                 <button 
                                     className="QandA_Button" 
                                     onClick={() => {
-
-                                        console.log('q' + this.state.count + ': ' + this.state.answer)
+                                        console.log(this.state.count)
                                         this.setState({ count: this.state.count + 1 });
-
-                                        if (this.state.count > 6) {
+                                        
+                                        if (this.state.count > this.state.questionBank.length) {
                                             this.setState({ showEnd: true})
                                         }
                                         else {
                                             this.setState({ showEnd: false})
                                         }
-                                        
-                                        
                                     }}
                                 >
                                     Submit
