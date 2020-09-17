@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import config from '../../../config'
+import PastIcebergForm from './PastIcebergForm'
 
 export default class PastIceberg extends Component {
 
@@ -7,7 +8,6 @@ export default class PastIceberg extends Component {
         super(props);
         this.state = {
           listItems: [],
-          count: 1,
         };
     }
     
@@ -19,7 +19,7 @@ export default class PastIceberg extends Component {
     }
 
     componentDidMount() {
-        this.IcebergData()
+        this.IcebergData();
     }
 
 
@@ -33,21 +33,30 @@ export default class PastIceberg extends Component {
         });  
         
     }
+
     
     render() {
 
         const { icebergId } = this.props.match.params
+        console.log(this.state.pastAnswer)
        
         return (
             <div className="IcebergList">
 
                 <h2>Past Iceberg</h2>
+                <div className="CompletedDate">
                     {this.state.listItems.length > 0 &&
                     this.state.listItems
                         .slice(icebergId-1, icebergId)
                         .map( date =>
-                        <h3>Completed on: {date.modified}</h3>
+                        <h3 key={date.id}>Completed on: {date.modified}</h3>
                     )}
+                </div>
+
+                <div>
+                    <PastIcebergForm />
+                </div> 
+                        
             </div>
         )
      }

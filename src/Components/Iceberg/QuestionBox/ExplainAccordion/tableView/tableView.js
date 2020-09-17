@@ -6,8 +6,6 @@ export default class TableView extends Component {
     
 
     render() {
-        
-        console.log(this.props.data);
 
         return (
             <div className="tableView">
@@ -15,12 +13,12 @@ export default class TableView extends Component {
                  {this.props.data.length > 0 &&
                         this.props.data.map(
                         (vocabArray => (
-                            <div className="column">
+                            <div className="column" key={vocabArray}>
                                 <ul>
                                 { this.props.data.length > 0 &&
                                     vocabArray.map(
                                         (emotion => (
-                                            <li><p>{emotion}</p></li>
+                                            <li key={emotion}>{emotion}</li>
                                         ))  
                                     )
                                 }

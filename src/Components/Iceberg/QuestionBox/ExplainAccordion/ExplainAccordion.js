@@ -5,7 +5,7 @@ import {
   AccordionButton,
   AccordionPanel,
 } from "@reach/accordion";
-//import "@reach/accordion/styles.css";
+import "@reach/accordion/styles.css";
 import './Accordion.css'
 
 
@@ -28,7 +28,7 @@ export default class ExplainAccordion extends React.Component {
                             
                         </AccordionButton>
                     <AccordionPanel>
-                        <p>{this.props.body}</p>
+                        {this.props.body}
                         
                     </AccordionPanel>
                 </AccordionItem>
