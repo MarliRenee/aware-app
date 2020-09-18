@@ -63,32 +63,26 @@ export default class QuestionBox extends Component {
         })
     }
 
-    //when user clicks 'save'
-    //POST request to /api/icebergs
-        //modified:
-        //userid: 1
-    //ID is logged and sent as props to use as 'icebergid' for responses POST
-
     handleSave = (e) => {
         e.preventDefault();
     
-        // //TO-DO - GRAB USERID FROM LOGIN
-        // const iceberg = {
-        //     modified: new Date(),
-        //     userid: 1,
-        // }
+        //TO-DO ***** GRAB USERID FROM LOGIN
+        const iceberg = {
+            modified: new Date(),
+            userid: 1,
+        }
 
-        // fetch(`${config.API_ENDPOINT}/icebergs`, {
-        //     method: 'POST',
-        //     body: JSON.stringify(response),
-        //     headers: {
-        //         'content-type': 'application/json',
-        //     }
-        // })
-        // console.log(JSON.stringify(response))
+        fetch(`${config.API_ENDPOINT}/icebergs`, {
+            method: 'POST',
+            body: JSON.stringify(iceberg),
+            headers: {
+                'content-type': 'application/json',
+            }
+        })
+        console.log(JSON.stringify(iceberg))
 
+        //TO-DO: ***** Need to replace user icebergid with dynamically generated id from DB.
         const response = {
-            //TO-DO: ***** Need to replace user icebergid with dynamically generated id from DB.
             icebergid: 1,
             q1: this.state.responseArray[0],
             q2: this.state.responseArray[1],
