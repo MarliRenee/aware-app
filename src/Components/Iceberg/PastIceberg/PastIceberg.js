@@ -38,7 +38,6 @@ export default class PastIceberg extends Component {
     render() {
 
         const { icebergId } = this.props.match.params
-        console.log(this.state.pastAnswer)
        
         return (
             <div className="IcebergList">
@@ -53,9 +52,13 @@ export default class PastIceberg extends Component {
                     )}
                 </div>
 
-                <div>
-                    <PastIcebergForm />
-                </div> 
+                <PastIcebergForm />
+                
+                <div className="linkButton">
+                    <a href="dashboard">Return to Dashboard</a>
+                </div>
+
+                
                         
             </div>
         )

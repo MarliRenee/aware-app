@@ -12,7 +12,6 @@ export default class PastIcebergForm extends Component {
         this.state = {
             questionBank: questionService,
             pastAnswer: '',
-            level: '',
 
         };
     }
@@ -31,19 +30,8 @@ export default class PastIcebergForm extends Component {
         });  
         
     }
-    
 
     render() {
-
-        // {this.state.pastAnswer.length > 0 &&
-        //     this.state.pastAnswer
-        //         .slice(icebergId-1, icebergId)
-        //         .map( date =>
-        //         <h3 key={date.id}>Completed on: {date.modified}</h3>
-        //     )}
-
-        console.log(this.state.pastAnswer)
-        console.log(this.state.questionBank)
 
         return (
 
@@ -54,7 +42,7 @@ export default class PastIcebergForm extends Component {
                     {this.state.questionBank.length > 0 && 
                         this.state.questionBank
                         .map(({level, question, TellMeMoreText, vocabArray, order}) => (
-                            <div className="IndividualQuestion" key={level}>
+                            <div className="IndividualQuestion" key={order}>
                                 <h2>{level}</h2> 
                                 <h3>{question}</h3>
                                 
@@ -62,17 +50,17 @@ export default class PastIcebergForm extends Component {
                                     title={"Tell Me More"} 
                                     body={TellMeMoreText}
                                 />
-
-  
+                                
                                 <div className="textArea">
                                     <textarea 
                                         readOnly={true} 
                                         value=
-                                        {this.state.pastAnswer.length > 0 &&
-                                            this.state.pastAnswer[0].q1
-                                                
-                                                
-                                            }
+                                        {
+                                            //Sample, have to fill with 
+                                            //this.state.pastAnswer[icebergIdVariable].questionVariable
+                                            this.state.pastAnswer.length > 0 &&
+                                             this.state.pastAnswer[2].q1
+                                        }   
                                     >
                                     </textarea>
                                 </div>

@@ -9,7 +9,7 @@ const qBank = [
       ["Sad", "Happy", "Mad"],
       ["Discouraged", "Intimidated", "Bright"],
     ],
-    order: "1"
+    order: 1
   },
 
   {
@@ -22,7 +22,7 @@ const qBank = [
       ["Sad", "Happy", "Mad"],
       ["Discouraged", "Intimidated", "Bright"],
     ],
-    order: "2"
+    order: 2
   },
   {
     level: "3. Feelings",
@@ -34,7 +34,7 @@ const qBank = [
       ["Sad", "Happy", "Mad"],
       ["Discouraged", "Intimidated", "Bright"],
     ],
-    order: "3"
+    order: 3
   },
   {
     level: "4. Feelings About Feelings",
@@ -46,7 +46,7 @@ const qBank = [
       ["Sad", "Happy", "Mad"],
       ["Discouraged", "Intimidated", "Bright"],
     ],
-    order: "4"
+    order: 4
   },
   {
     level: "5. Perceptions",
@@ -58,7 +58,7 @@ const qBank = [
       ["Sad", "Happy", "Mad"],
       ["Discouraged", "Intimidated", "Bright"],
     ],
-    order: "5"
+    order: 5
   },
   {
     level: "6. Expectations",
@@ -82,7 +82,7 @@ const qBank = [
       ["Sad", "Happy", "Mad"],
       ["Discouraged", "Intimidated", "Bright"],
     ],
-    order: "7"
+    order: 7
   },
   {
     level: "8. Self",
@@ -94,11 +94,14 @@ const qBank = [
       ["Sad", "Happy", "Mad"],
       ["Discouraged", "Intimidated", "Bright"],
     ],
-    order: "8"
+    order: 8
   },
 ];
 
-export default qBank;
+
+
+export default qBank
+
 
 // Ecstatic,
 // Elated,

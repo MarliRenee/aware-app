@@ -22,14 +22,17 @@ class End extends Component {
 
                     {/* //IF NOT SIGNED IN, DIRECTS TO SIGN IN/SIGN UP, THEN POSTS TO ARCHIVE */}
                     {/* Consider sign in as pop up so it doesn't direct away from the main page */}
-                    <div className="linkButton">
-                        <Link to='/dashboard'>Save</Link>
-                    </div>
+                    <button 
+                        className="linkButton" 
+                        onClick={this.props.handleSave}
+                    >
+                       <Link to='/dashboard'>Save</Link> 
+                    </button>
                     
 
-                    <div className="linkButton">
+                    <button className="linkButton" >
                         <Link to='/iceberg'>New Iceberg</Link>
-                    </div>
+                    </button>
                 </div>
             </section>
         )
