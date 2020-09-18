@@ -81,8 +81,10 @@ export default class QuestionBox extends Component {
         })
         console.log(JSON.stringify(iceberg))
 
-        //TO-DO: ***** Need to replace user icebergid with dynamically generated id from DB.
+        // const { icebergId } = // api/icebergs id,
+
         const response = {
+            //TO-DO: ***** Need to replace user icebergid with dynamically generated id from DB.
             icebergid: 1,
             q1: this.state.responseArray[0],
             q2: this.state.responseArray[1],
