@@ -81,16 +81,15 @@ export default class QuestionBox extends Component {
         })
         .then(response => response.json())
         .then(
+            console.log(response.json),
             data => this.setState({icebergId: data.id}),
-
-            console.log(this.state.icebergId),
-
-            this.postIceberg
         )
+        console.log(this.state.icebergId)
+        // .then(this.postIceberg())
     }
 
     postIceberg() {
-        const response = {  
+        let response = {  
             //TO-DO: ***** Need to replace user icebergid with dynamically generated id from DB.
             icebergid: this.state.icebergId,
             q1: this.state.responseArray[0],
