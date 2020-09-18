@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './QuestionBox.css'
 import config from '../../../config'
 import questionService from '../QuestionService'
-import responseService from '../ResponsesService'
 import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
 import TableView from './ExplainAccordion/tableView/tableView';
 import End from './End/End'
@@ -18,6 +17,7 @@ export default class QuestionBox extends Component {
             questionNumber: 0,
             responseBody: '',
             responseArray: [],
+            icebergId: '',
         };
     }
 
@@ -59,7 +59,6 @@ export default class QuestionBox extends Component {
         this.setState({
             responseArray: this.state.responseArray.concat(responseBody)
         }, () => {
-            console.log(this.state.responseArray)
         })
     }
 
@@ -78,14 +77,20 @@ export default class QuestionBox extends Component {
             headers: {
                 'content-type': 'application/json',
             }
+
         })
-        console.log(JSON.stringify(iceberg))
+        .then(response => response.json())
+        .then(
+            data => this.setState({icebergId: data.id}),
+            console.log(data => console.log(data))
+        )
+        
+        //console.log(JSON.stringify(iceberg))
+        // console.log(this.state.icebergId)
 
-        // const { icebergId } = // api/icebergs id,
-
-        const response = {
+        const response = {  
             //TO-DO: ***** Need to replace user icebergid with dynamically generated id from DB.
-            icebergid: 1,
+            icebergid: this.state.icebergId,
             q1: this.state.responseArray[0],
             q2: this.state.responseArray[1],
             q3: this.state.responseArray[2],
@@ -162,9 +167,7 @@ export default class QuestionBox extends Component {
                                         else {
                                             this.setState({ showEnd: false})
                                         }
-                                        //send textarea value to qResponses array
-                                        // console.log(this.qResponses)
-                                        console.log(this.state.count)
+                                        //TO-DO **** SHOULD NOT MUTATE STATE DIRECTLY, CALL FUNCTION WITH SET STATE
                                         this.state.questionNumber++
                                         this.addToResponseArray(this.state.questionNumber, this.state.responseBody)
                                     }}
