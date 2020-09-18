@@ -80,18 +80,16 @@ export default class QuestionBox extends Component {
 
         })
         .then(response => response.json())
-        .then(
-            console.log(response.json),
-            data => this.setState({icebergId: data.id}),
-        )
-        console.log(this.state.icebergId)
-        // .then(this.postIceberg())
+        .then((responseJson) => {
+            const icebergId = responseJson.id
+            this.postIceberg(icebergId)
+        })
+        
     }
 
-    postIceberg() {
+    postIceberg(icebergId) {
         let response = {  
-            //TO-DO: ***** Need to replace user icebergid with dynamically generated id from DB.
-            icebergid: this.state.icebergId,
+            icebergid: icebergId,
             q1: this.state.responseArray[0],
             q2: this.state.responseArray[1],
             q3: this.state.responseArray[2],
@@ -109,7 +107,6 @@ export default class QuestionBox extends Component {
                 'content-type': 'application/json',
             }
         })
-        console.log(JSON.stringify(response))
     }
 
     render() {
