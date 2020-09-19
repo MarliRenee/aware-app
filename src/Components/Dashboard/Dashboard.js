@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ArchiveIceberg from '../ArchiveIceberg/ArchiveIceberg.js'
 import IcebergApiService from '../../Services/iceberg-api-service'
 import IcebergListContext from '../../Contexts/IcebergListContext'
-import TestIcebergList from '../Iceberg/testIcebergList'
+import PastIcebergList from '../Iceberg/PastIcebergList'
 
 
 export default class Dashboard extends Component {
@@ -36,7 +36,7 @@ export default class Dashboard extends Component {
           </div>
         </header>
 
-        <TestIcebergList />
+        <PastIcebergList />
 
     </main>
   );

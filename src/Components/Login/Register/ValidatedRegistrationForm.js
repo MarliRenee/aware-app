@@ -1,3 +1,4 @@
+import { setNestedObjectValues } from 'formik';
 import React, { useState } from 'react'
 import config from '../../../config'
 
@@ -6,6 +7,7 @@ import './LoginRegister.css'
 export default function ValidatedRegistrationForm () {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isVisible, setVisibility] = useState(false);
 
   function validateForm() {
     return username.length > 0 && password.length > 0;
@@ -26,10 +28,10 @@ export default function ValidatedRegistrationForm () {
           'content-type': 'application/json',
       }
     })
-    console.log(user)
+  }
 
-
-    
+  function thankYou() {
+    setVisibility(true)
   }
 
   return (
@@ -49,9 +51,17 @@ export default function ValidatedRegistrationForm () {
             type="password"
           />
           <div>
-            <button disabled={!validateForm()} type="submit">
+            <button disabled={!validateForm()} type="submit" onClick={thankYou}>
               Register
             </button>
+
+            {isVisible &&
+              <div>
+                Thank you! You can view your dashboard <a href="/dashboard">here</a>
+              </div>
+            }
+           
+           
           </div>
       </form>
     </div>

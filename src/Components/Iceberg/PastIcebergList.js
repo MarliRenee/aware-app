@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import config from '../../config'
 import { NavLink } from 'react-router-dom'
 
-import './testIcebergList.css'
+import './PastIcebergList.css'
 
 export default class IcebergListTest extends Component {
    
