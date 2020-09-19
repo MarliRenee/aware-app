@@ -26,7 +26,6 @@ export default class Dashboard extends Component {
 
 
   render() {
-    // const { error } = this.context
 
     return (
       <main className='Dashboard'>

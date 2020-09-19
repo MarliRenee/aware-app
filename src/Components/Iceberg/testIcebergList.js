@@ -11,6 +11,7 @@ export default class IcebergListTest extends Component {
         this.state = {
           listItems: [],
         };
+        
     }
 
     componentDidMount() {

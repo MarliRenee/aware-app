@@ -52,7 +52,7 @@ export default class PastIceberg extends Component {
                     )}
                 </div>
 
-                <PastIcebergForm />
+                <PastIcebergForm icebergId={icebergId}/>
                 
                 <div className="linkButton">
                     <a href="dashboard">Return to Dashboard</a>

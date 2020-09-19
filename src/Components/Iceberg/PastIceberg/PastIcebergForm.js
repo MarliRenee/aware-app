@@ -11,13 +11,15 @@ export default class PastIcebergForm extends Component {
         super(props);
         this.state = {
             questionBank: questionService,
-            pastAnswer: '',
+            pastAnswer: [],
+            qNumber: '',
 
         };
     }
 
     componentDidMount() {
         this.ReponsesData()
+        
     }
 
     ReponsesData() {
@@ -27,11 +29,16 @@ export default class PastIcebergForm extends Component {
             this.setState({
                 pastAnswer: data
             })
-        });  
+        })
         
     }
 
+
     render() {
+
+        const icebergId = this.props.icebergId
+        const qNumber = '';
+        // console.log(order)
 
         return (
 
@@ -42,6 +49,7 @@ export default class PastIcebergForm extends Component {
                     {this.state.questionBank.length > 0 && 
                         this.state.questionBank
                         .map(({level, question, TellMeMoreText, vocabArray, order}) => (
+
                             <div className="IndividualQuestion" key={order}>
                                 <h2>{level}</h2> 
                                 <h3>{question}</h3>
@@ -55,11 +63,11 @@ export default class PastIcebergForm extends Component {
                                     <textarea 
                                         readOnly={true} 
                                         value=
-                                        {
+                                        {   
                                             //Sample, have to fill with 
-                                            //this.state.pastAnswer[icebergIdVariable].questionVariable
                                             this.state.pastAnswer.length > 0 &&
-                                             this.state.pastAnswer[2].q1
+                                            // this.state.pastAnswer[icebergId-1].q1
+                                            this.state.pastAnswer[icebergId-1]['q' + order]
                                         }   
                                     >
                                     </textarea>
@@ -73,7 +81,7 @@ export default class PastIcebergForm extends Component {
 
                             </div> 
                             
-                        ))
+                        ), this)
                         
                     }
 
