@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
 import config from '../../../config'
 import PastIcebergForm from './PastIcebergForm'
 
@@ -55,7 +56,7 @@ export default class PastIceberg extends Component {
                 <PastIcebergForm icebergId={icebergId}/>
                 
                 <div className="linkButton">
-                    <a href="dashboard">Return to Dashboard</a>
+                    <NavLink to="dashboard">Return to Dashboard</NavLink>
                 </div>
 
                 

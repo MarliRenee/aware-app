@@ -37,8 +37,6 @@ export default class PastIcebergForm extends Component {
     render() {
 
         const icebergId = this.props.icebergId
-        const qNumber = '';
-        // console.log(order)
 
         return (
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import TokenService from '../../Services/token-service'
 import './Navbar.css'
 
@@ -38,8 +38,8 @@ export default class Navbar extends Component {
     return (
       <main className='NavBar'>
           <ul>
-              <li className="logo"><a href="/">AWARE</a></li>
-              <li><a href="iceberg">Demo</a></li>
+              <li className="logo"><NavLink to="/">AWARE</NavLink></li>
+              <li><NavLink to="iceberg">Demo</NavLink></li>
               <li>
                 {TokenService.hasAuthToken()
                   ? this.renderLogoutLink()

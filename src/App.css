@@ -27,18 +27,15 @@ button {
 }   
 
 .linkButton {
-   text-align: center;
-   display: inline-flex;
-   margin: 10px;
-   font-size: 14px;
-}
-
-.linkButton a {
     border: 0;
     text-transform: uppercase;
     background: #C4C4C4;
     padding: 10px;
     height: 40px;
+    text-align: center;
+    display: inline-flex;
+    margin: 10px;
+    font-size: 14px;
 }
 
 section {

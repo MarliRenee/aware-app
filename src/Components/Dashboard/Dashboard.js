@@ -3,6 +3,7 @@ import ArchiveIceberg from '../ArchiveIceberg/ArchiveIceberg.js'
 import IcebergApiService from '../../Services/iceberg-api-service'
 import IcebergListContext from '../../Contexts/IcebergListContext'
 import PastIcebergList from '../Iceberg/PastIcebergList'
+import { NavLink } from 'react-router-dom';
 
 
 export default class Dashboard extends Component {
@@ -31,8 +32,8 @@ export default class Dashboard extends Component {
       <main className='Dashboard'>
         <header>
           <h1>Welcome</h1>
-          <div className="linkButton">
-            <a href="iceberg">New Iceberg</a>
+          <div className="Explore">
+            <NavLink className="linkButton" to="iceberg">New Iceberg</NavLink>
           </div>
         </header>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import config from '../../../config'
 
 import './LoginRegister.css'
@@ -8,12 +9,12 @@ export default function ValidatedRegistrationForm () {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  function validateForm() {
-    return username.length > 0 && password.length > 0;
-  }
+  // function validateForm() {
+  //   return username.length > 0 && password.length > 0;
+  // }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit(e) {
+    e.preventDefault();
 
     const user = {
         username: username,
@@ -27,18 +28,17 @@ export default function ValidatedRegistrationForm () {
           'content-type': 'application/json',
       }
     })
-   //**NOTE TO SELF*** REDIRECT TO DASHBOARD
-
     console.log(user)
-    
-
+   //**NOTE TO SELF*** REDIRECT TO DASHBOARD
   }
+
 
   return (
     <div className="Login">
       <form onSubmit={handleSubmit}>
           <h3>Username</h3>
           <input
+            required
             autoFocus
             type="text"
             value={username}
@@ -46,15 +46,16 @@ export default function ValidatedRegistrationForm () {
           />
           <h3>Password</h3>
           <input
+            required
             value={password}
             onChange={e => setPassword(e.target.value)}
             type="password"
           />
-          <div>
-            <button disabled={!validateForm()} type="submit">
-              Log In
+
+            <button type="submit" className="buttonOveride">
+              <NavLink className="linkButton" to="/dashboard">Log In</NavLink>
             </button>
-          </div>
+
       </form>
     </div>
   );

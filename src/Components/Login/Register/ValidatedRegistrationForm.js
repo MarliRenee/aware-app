@@ -1,5 +1,5 @@
-import { setNestedObjectValues } from 'formik';
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import config from '../../../config'
 
 import './LoginRegister.css'
@@ -7,8 +7,9 @@ import './LoginRegister.css'
 export default function ValidatedRegistrationForm () {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isVisible, setVisibility] = useState(false);
-
+  const [errorVisible, setError] = useState(false);
+  const [thankYouVisible, setThankYou] = useState(false);
+ 
   function validateForm() {
     return username.length > 0 && password.length > 0;
   }
@@ -17,8 +18,8 @@ export default function ValidatedRegistrationForm () {
     event.preventDefault();
 
     const user = {
-        username: username,
-        password: password,
+      username: username,
+      password: password,
     }
 
     fetch(`${config.API_ENDPOINT}/users`, {
@@ -28,10 +29,11 @@ export default function ValidatedRegistrationForm () {
           'content-type': 'application/json',
       }
     })
-  }
 
-  function thankYou() {
-    setVisibility(true)
+    .then(responseJson => { 
+      if (responseJson.status === 500) {setError(true)}
+      else{setThankYou(true)}
+    })
   }
 
   return (
@@ -51,13 +53,19 @@ export default function ValidatedRegistrationForm () {
             type="password"
           />
           <div>
-            <button disabled={!validateForm()} type="submit" onClick={thankYou}>
+            <button disabled={!validateForm()} type="submit" >
               Register
             </button>
 
-            {isVisible &&
+            {thankYouVisible && 
               <div>
-                Thank you! You can view your dashboard <a href="/dashboard">here</a>
+                Thank you! You can view your dashboard <NavLink to="/dashboard">here</NavLink>
+              </div>
+            }
+
+            {errorVisible && 
+              <div>
+                That username is already taken.
               </div>
             }
            
@@ -68,3 +76,4 @@ export default function ValidatedRegistrationForm () {
   );
 
 }
+

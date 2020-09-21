@@ -6,6 +6,7 @@ import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
 import TableView from './ExplainAccordion/tableView/tableView';
 import End from './End/End'
 
+//TO-DO *** SUBMIT DISABLED AFFECTS ALL BUTTONS, NOT ONLY CURRENT QUESTION BUTTON 
 
 export default class QuestionBox extends Component {
     constructor(props) {
@@ -48,14 +49,13 @@ export default class QuestionBox extends Component {
         });
     }
 
-    //TO-DO *** CLEAR EXAMPLE, THEN DISABLE SUBMIT BUTTON IF EMPTY
     handleResponse = (e) => {
         this.setState({
             responseBody: e.target.value
         })
     }
 
-    addToResponseArray(questionNumber, responseBody) {
+    addToResponseArray(responseBody) {
         this.setState({
             responseArray: this.state.responseArray.concat(responseBody)
         }, () => {
@@ -87,6 +87,12 @@ export default class QuestionBox extends Component {
         
     }
 
+    incrementNumber() {
+        this.setState({
+            questionNumber: this.state.questionNumber + 1  
+        })
+    }
+
     postIceberg(icebergId) {
         let response = {  
             icebergid: icebergId,
@@ -111,7 +117,7 @@ export default class QuestionBox extends Component {
 
     render() {
 
-        // const textAreaValidated = response.length > 0; 
+        const isEnabled = this.state.responseBody.length > 0;
 
         return (
 
@@ -132,14 +138,9 @@ export default class QuestionBox extends Component {
 
                                 <div className="textArea">
                                     <textarea 
-                                        //the value needs to be q1, q2 etc. dynamically render based on order.
-                                        //or rename to 1, 2, 3 etc., and value++ on each submit?
-                                        defaultValue = {example}
+                                        placeholder = {example}
                                         onChange = {this.handleResponse}
                                         className="textarea"
-                                        //TO-DO CLEAR RESPONSE WHEN USER CLICKS IN
-                                        // defaultValue={example + '(Eventually this will clear on click)'}
-                                        // onChange={this.handleResponse}
                                     >
                                     </textarea>
                                 </div>
@@ -152,21 +153,21 @@ export default class QuestionBox extends Component {
 
 
                                 <button 
-                                    // disabled={!textAreaValidated}
+                                    type="submit"
+                                    disabled={!isEnabled}
                                     className="QandA_Button" 
                                     onClick={() => {
                                         this.setState({ count: this.state.count + 1 });
                                         
                                         if (this.state.count > this.state.questionBank.length - 1) {
                                             this.setState({ showEnd: true})
-                                            //disable the submit button after these conditions are met
                                         }
                                         else {
                                             this.setState({ showEnd: false})
                                         }
-                                        //TO-DO **** SHOULD NOT MUTATE STATE DIRECTLY, CALL FUNCTION WITH SET STATE
-                                        this.state.questionNumber++
-                                        this.addToResponseArray(this.state.questionNumber, this.state.responseBody)
+                                        this.incrementNumber();
+                                        this.addToResponseArray(this.state.questionNumber, this.state.responseBody);
+                                        this.setState({ responseBody: '' });
                                     }}
                                 >
                                     Submit
@@ -197,3 +198,4 @@ export default class QuestionBox extends Component {
         );   
     } 
 }
+  
