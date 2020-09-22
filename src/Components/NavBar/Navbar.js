@@ -39,7 +39,7 @@ export default class Navbar extends Component {
       <main className='NavBar'>
           <ul>
               <li className="logo"><NavLink to="/">AWARE</NavLink></li>
-              <li><NavLink to="iceberg">Demo</NavLink></li>
+              <li><NavLink to="/iceberg">Demo</NavLink></li>
               <li>
                 {TokenService.hasAuthToken()
                   ? this.renderLogoutLink()

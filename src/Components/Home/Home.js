@@ -14,7 +14,7 @@ export default class Home extends Component {
           <h1>Understand Your Emotions</h1>
           <h3>With simple prompts, the Iceberg Model will guide you to a greater understanding of yourself</h3>
           <div>
-            <NavLink className="linkButton" to="iceberg">explore</NavLink>
+            <NavLink className="linkButton" to="/iceberg">explore</NavLink>
           </div>
           
 
@@ -54,7 +54,7 @@ export default class Home extends Component {
         </section>
 
         <div className="End">
-            <NavLink className="linkButton" to="iceberg">start demo</NavLink>
+            <NavLink className="linkButton" to="/iceberg">start demo</NavLink>
         </div>
       
       </main>

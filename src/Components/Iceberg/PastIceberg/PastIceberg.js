@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
 import config from '../../../config'
+import { format } from 'date-fns'
 import PastIcebergForm from './PastIcebergForm'
 
 export default class PastIceberg extends Component {
@@ -21,6 +22,7 @@ export default class PastIceberg extends Component {
 
     componentDidMount() {
         this.IcebergData();
+
     }
 
 
@@ -49,14 +51,14 @@ export default class PastIceberg extends Component {
                     this.state.listItems
                         .slice(icebergId-1, icebergId)
                         .map( date =>
-                        <h3 key={date.id}>Completed on: {date.modified}</h3>
+                        <h3 key={date.id}>Completed on {format(new Date(date.modified), "MMM dd, yyyy")}</h3>
                     )}
                 </div>
 
                 <PastIcebergForm icebergId={icebergId}/>
                 
                 <div className="linkButton">
-                    <NavLink to="dashboard">Return to Dashboard</NavLink>
+                    <NavLink to="/dashboard">Return to Dashboard</NavLink>
                 </div>
 
                 

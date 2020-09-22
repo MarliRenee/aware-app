@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { format } from 'date-fns'
 import config from '../../config'
 import { NavLink } from 'react-router-dom'
 
@@ -42,7 +43,8 @@ export default class IcebergListTest extends Component {
                             <NavLink
                                 to={`/iceberg/${item.id}`}
                             >
-                                {item.id + '.   ' + item.modified}
+                                {item.id + '.   ' + format(new Date(item.modified), "MMM dd, yyyy")}
+                                
                             </NavLink>
                         </li>
                     )}

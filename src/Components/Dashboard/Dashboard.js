@@ -33,7 +33,7 @@ export default class Dashboard extends Component {
         <header>
           <h1>Welcome</h1>
           <div className="Explore">
-            <NavLink className="linkButton" to="iceberg">New Iceberg</NavLink>
+            <NavLink className="linkButton" to="/iceberg">New Iceberg</NavLink>
           </div>
         </header>
 
