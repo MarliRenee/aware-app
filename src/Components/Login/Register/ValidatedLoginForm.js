@@ -11,14 +11,9 @@ export default function ValidatedRegistrationForm () {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const { username, password } = e.target
-
     TokenService.saveAuthToken(
       TokenService.makeBasicAuthToken(username, password)
     )
-
-    const { history } = this.props
-    history.push('/dashboard')
   }
 
   function link () {
@@ -53,3 +48,5 @@ export default function ValidatedRegistrationForm () {
   );
 
 }
+
+// /

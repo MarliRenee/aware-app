@@ -22,19 +22,22 @@ export default class IcebergListTest extends Component {
     }
 
     IcebergData () {
-        // fetch(`${config.API_ENDPOINT}/icebergs`, {
-        //     headers: {
-        //         'authorization': `basic ${TokenService.getAuthToken()}`,
-        //     },
-        // })
         IcebergApiService.getIcebergs()
-        .then(response => response.json())
         .then(data => {
             this.setState({
                 listItems: data
             })
         });  
         
+    }
+
+    noIcebergs() {
+        return <p>You currently have no icebergs to display. Click 'New Iceberg' to get started</p>
+    }
+
+    yesIcebergs() {
+        return
+            
     }
 
     render() {
@@ -44,14 +47,13 @@ export default class IcebergListTest extends Component {
             <div className="IcebergList">
                 <h2>Past Icebergs</h2>
                 <ul>
-                    {this.state.listItems.length > 0 &&
+                    { this.state.listItems.length > 0 &&
                     this.state.listItems.map(item =>
                         <li key={item.id} className="IcebergArchive">
-                            <NavLink
+                          <NavLink
                                 to={`/iceberg/${item.id}`}
                             >
-                                {item.id + '.   ' + format(new Date(item.modified), "MMM dd, yyyy")}
-                                
+                                {'Iceberg from ' + format(new Date(item.modified), "MMM dd, yyyy")}
                             </NavLink>
                         </li>
                     )}

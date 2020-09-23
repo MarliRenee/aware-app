@@ -20,8 +20,8 @@ export default class Dashboard extends Component {
   renderIcebergs() {
     const { icebergList = [] } = this.context
     return icebergList.map(iceberg =>
-      <ArchiveIceberg
-      />
+      <ArchiveIceberg/>
+      
     )
   }
 
