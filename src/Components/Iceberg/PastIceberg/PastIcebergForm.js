@@ -4,6 +4,7 @@ import config from '../../../config'
 import questionService from '../QuestionService'
 import ExplainAccordion from '../QuestionBox/ExplainAccordion/ExplainAccordion'
 import TableView from '../QuestionBox/ExplainAccordion/tableView/tableView';
+import TokenService from '../../../Services/token-service'
 
 
 export default class PastIcebergForm extends Component {
@@ -23,7 +24,11 @@ export default class PastIcebergForm extends Component {
     }
 
     ReponsesData() {
-        fetch(`${config.API_ENDPOINT}/responses`)
+        fetch(`${config.API_ENDPOINT}/responses`, {
+            headers: {
+                'authorization': `basic ${TokenService.getAuthToken()}`,
+            },
+        })
         .then(response => response.json())
         .then(data => {
             this.setState({
@@ -32,7 +37,6 @@ export default class PastIcebergForm extends Component {
         })
         
     }
-
 
     render() {
 

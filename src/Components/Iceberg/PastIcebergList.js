@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { format } from 'date-fns'
-import config from '../../config'
 import { NavLink } from 'react-router-dom'
+//import TokenService from '../../Services/token-service'
+import IcebergApiService from '../../Services/iceberg-api-service'
+
 
 import './PastIcebergList.css'
 
@@ -20,7 +22,12 @@ export default class IcebergListTest extends Component {
     }
 
     IcebergData () {
-        fetch(`${config.API_ENDPOINT}/icebergs`)
+        // fetch(`${config.API_ENDPOINT}/icebergs`, {
+        //     headers: {
+        //         'authorization': `basic ${TokenService.getAuthToken()}`,
+        //     },
+        // })
+        IcebergApiService.getIcebergs()
         .then(response => response.json())
         .then(data => {
             this.setState({
