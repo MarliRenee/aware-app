@@ -7,7 +7,7 @@ const IcebergApiService = {
       headers: {
         'authorization': `basic ${TokenService.getAuthToken()}`,
       },
-    })
+    }) 
       .then(res =>
         (!res.ok)
           ? res.json().then(e => Promise.reject(e))
@@ -21,12 +21,25 @@ const IcebergApiService = {
         'authorization': `basic ${TokenService.getAuthToken()}`,
       },
     })
-      .then(res =>
+      .then(res => 
         (!res.ok)
           ? res.json().then(e => Promise.reject(e))
           : res.json()
       )
   },
+
+  getUsers() {
+    return fetch(`${config.API_ENDPOINT}/users`, {
+      headers: {
+      },
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  }
+
 }
 
 export default IcebergApiService

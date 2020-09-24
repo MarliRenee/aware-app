@@ -14,8 +14,8 @@ export default function ValidatedRegistrationForm () {
     return username.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit(e) {
+    e.preventDefault();
 
     const user = {
       username: username,
