@@ -59,11 +59,9 @@ export default class QuestionBox extends Component {
     }
 
     addToResponseArray () {
-        console.log(this.state.responseBody)
         this.setState({
             responseArray: this.state.responseArray.concat(this.state.responseBody)
         })
-        console.log(this.state.responseArray)
     }
 
     handleSave = (e) => {
@@ -99,7 +97,6 @@ export default class QuestionBox extends Component {
             }
         })
 
-        console.log(response)
     }
 
     incrementNumber() {

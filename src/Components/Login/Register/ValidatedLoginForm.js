@@ -22,7 +22,6 @@ export default function ValidatedRegistrationForm () {
       TokenService.makeBasicAuthToken(username, password),
     );
 
-
     IcebergApiService.getIcebergs()
       .then(response => {window.location.href="/dashboard"})
       // TO-DO *** implement later: `this.props.history.push('/dashboard')`

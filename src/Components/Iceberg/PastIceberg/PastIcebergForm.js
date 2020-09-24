@@ -34,12 +34,6 @@ export default class PastIcebergForm extends Component {
     render() {
 
         const icebergId = this.props.icebergId
-        console.log(icebergId)
-        console.log( 
-            this.state.pastAnswer
-            .slice(icebergId-1,icebergId)
-            
-        )
 
         return (
 

@@ -27,7 +27,6 @@ export default class IcebergListTest extends Component {
                 listItems: data
             })
         }); 
-        console.log(this.state.listItems) 
         
     }
 

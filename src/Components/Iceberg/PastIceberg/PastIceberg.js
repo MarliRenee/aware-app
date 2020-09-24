@@ -27,7 +27,9 @@ export default class PastIceberg extends Component {
 
     }
 
-   
+    link() {
+        window.location.href="/dashboard"
+    }
 
     IcebergData () {
         IcebergApiService.getIcebergs()
@@ -58,9 +60,10 @@ export default class PastIceberg extends Component {
 
                 <PastIcebergForm icebergId={icebergId}/>
                 
-                <div className="linkButton">
-                    <NavLink to="/dashboard">Return to Dashboard</NavLink>
-                </div>
+                {/* TO-DO *** this.props.historypush*/}
+                <button className="linkButton" onClick={this.link}>
+                    Return to Dashboard
+                </button>
 
                 
                         

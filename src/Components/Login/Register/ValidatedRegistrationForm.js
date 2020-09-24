@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import config from '../../../config'
+import TokenService from '../../../Services/token-service'
+import IcebergApiService from '../../../Services/iceberg-api-service'
+
 
 import './LoginRegister.css'
 
@@ -17,19 +19,15 @@ export default function ValidatedRegistrationForm () {
   function handleSubmit(e) {
     e.preventDefault();
 
+    TokenService.saveAuthToken(
+      TokenService.makeBasicAuthToken(username, password),
+    );
     const user = {
       username: username,
       password: password,
     }
 
-    fetch(`${config.API_ENDPOINT}/users`, {
-      method: 'POST',
-      body: JSON.stringify(user),
-      headers: {
-          'content-type': 'application/json',
-      }
-    })
-
+    IcebergApiService.postUsers(user)
     .then(responseJson => { 
       if (responseJson.status === 500) {setError(true)}
       else{setThankYou(true)}
