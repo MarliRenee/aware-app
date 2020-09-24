@@ -26,7 +26,7 @@ export default function ValidatedRegistrationForm () {
 
     IcebergApiService.getIcebergs()
       .then(response => {window.location.href="/dashboard"})
-      // implement later: `this.props.history.push('/dashboard')`
+      // TO-DO *** implement later: `this.props.history.push('/dashboard')`
       .catch(error => {setError(true)})
 
   }

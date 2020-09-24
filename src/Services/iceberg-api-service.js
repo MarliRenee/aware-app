@@ -46,6 +46,20 @@ const IcebergApiService = {
       headers: {
         'authorization': `basic ${TokenService.getAuthToken()}`,
       },
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  },
+
+  postResponses() {
+    return fetch(`${config.API_ENDPOINT}/responses`, {
+      method: 'POST',
+      headers: {
+        'authorization': `basic ${TokenService.getAuthToken()}`,
+      },
       body: JSON.stringify({
         icebergid: '',
       }),

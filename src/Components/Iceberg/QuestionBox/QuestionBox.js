@@ -5,6 +5,7 @@ import questionService from '../QuestionService'
 import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
 import TableView from './ExplainAccordion/tableView/tableView';
 import IcebergApiService from '../../../Services/iceberg-api-service'
+import TokenService from '../../../Services/token-service'
 import End from './End/End'
 
 //TO-DO *** SUBMIT DISABLED AFFECTS ALL BUTTONS, NOT ONLY CURRENT QUESTION BUTTON 
@@ -50,33 +51,45 @@ export default class QuestionBox extends Component {
         });
     }
 
+
     handleResponse = (e) => {
         this.setState({
             responseBody: e.target.value
         })
     }
 
-    addToResponseArray(responseBody) {
+    addToResponseArray () {
+        console.log(this.state.responseBody)
         this.setState({
-            responseArray: this.state.responseArray.concat(responseBody)
-        }, () => {
+            responseArray: this.state.responseArray.concat(this.state.responseBody)
         })
+        console.log(this.state.responseArray)
     }
+
+    // handleSave = (e) => {
+    //     e.preventDefault();
+
+    //     IcebergApiService.postIceberg()
+    //     .then(response => {window.location.href="/dashboard"})
+    //     //TO-DO *** swap for props.history.push(/)
+    // }
 
     handleSave = (e) => {
         e.preventDefault();
 
-        IcebergApiService.postIceberg();
+        IcebergApiService.postIceberg()
+        .then(res =>
+            this.postResponses(res.id)
+        )
+        // this.postResponses(1)
+        // (console.log('great!'))
+        // this.postResponses(res.id)
         
+        //TO-DO *** swap for props.history.push(/)
+        //.then(response => {window.location.href="/dashboard"})
     }
 
-    incrementNumber() {
-        this.setState({
-            questionNumber: this.state.questionNumber + 1  
-        })
-    }
-
-    postIceberg(icebergId) {
+    postResponses(icebergId) {
         let response = {  
             icebergid: icebergId,
             q1: this.state.responseArray[0],
@@ -94,7 +107,16 @@ export default class QuestionBox extends Component {
             body: JSON.stringify(response),
             headers: {
                 'content-type': 'application/json',
+                'authorization': `basic ${TokenService.getAuthToken()}`
             }
+        })
+
+        console.log(response)
+    }
+
+    incrementNumber() {
+        this.setState({
+            questionNumber: this.state.questionNumber + 1   
         })
     }
 
@@ -149,7 +171,8 @@ export default class QuestionBox extends Component {
                                             this.setState({ showEnd: false})
                                         }
                                         this.incrementNumber();
-                                        this.addToResponseArray(this.state.questionNumber, this.state.responseBody);
+                                        this.addToResponseArray();
+                                        // this.addToResponseArray(this.state.responseBody);
                                         this.setState({ responseBody: '' });
                                     }}
                                 >
