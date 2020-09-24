@@ -4,6 +4,7 @@ import config from '../../../config'
 import questionService from '../QuestionService'
 import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
 import TableView from './ExplainAccordion/tableView/tableView';
+import IcebergApiService from '../../../Services/iceberg-api-service'
 import End from './End/End'
 
 //TO-DO *** SUBMIT DISABLED AFFECTS ALL BUTTONS, NOT ONLY CURRENT QUESTION BUTTON 
@@ -64,26 +65,8 @@ export default class QuestionBox extends Component {
 
     handleSave = (e) => {
         e.preventDefault();
-    
-        //TO-DO ***** GRAB USERID FROM LOGIN
-        const iceberg = {
-            modified: new Date(),
-            userid: 1,
-        }
 
-        fetch(`${config.API_ENDPOINT}/icebergs`, {
-            method: 'POST',
-            body: JSON.stringify(iceberg),
-            headers: {
-                'content-type': 'application/json',
-            }
-
-        })
-        .then(response => response.json())
-        .then((responseJson) => {
-            const icebergId = responseJson.id
-            this.postIceberg(icebergId)
-        })
+        IcebergApiService.postIceberg();
         
     }
 

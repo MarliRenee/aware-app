@@ -56,10 +56,7 @@ export default function ValidatedRegistrationForm () {
           </div>
         }
 
-        <button 
-          className="buttonOveride" 
-          type="submit" 
-        >
+        <button type="submit">
           Log In
         </button>
        
@@ -68,5 +65,3 @@ export default function ValidatedRegistrationForm () {
   );
 
 }
-
-// onClick={validate}

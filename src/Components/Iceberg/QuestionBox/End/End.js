@@ -26,7 +26,7 @@ class End extends Component {
                         className="linkButton" 
                         onClick={this.props.handleSave}
                     >
-                       <Link to='/dashboard'>Save</Link> 
+                       Save
                     </button>
                     
 
