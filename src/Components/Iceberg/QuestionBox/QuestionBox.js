@@ -66,27 +66,15 @@ export default class QuestionBox extends Component {
         console.log(this.state.responseArray)
     }
 
-    // handleSave = (e) => {
-    //     e.preventDefault();
-
-    //     IcebergApiService.postIceberg()
-    //     .then(response => {window.location.href="/dashboard"})
-    //     //TO-DO *** swap for props.history.push(/)
-    // }
-
     handleSave = (e) => {
         e.preventDefault();
 
         IcebergApiService.postIceberg()
         .then(res =>
-            this.postResponses(res.id)
+            this.postResponses(res.id),
+            //TO-DO *** Change to history.props
+            window.location.href="/dashboard"
         )
-        // this.postResponses(1)
-        // (console.log('great!'))
-        // this.postResponses(res.id)
-        
-        //TO-DO *** swap for props.history.push(/)
-        //.then(response => {window.location.href="/dashboard"})
     }
 
     postResponses(icebergId) {
@@ -172,7 +160,6 @@ export default class QuestionBox extends Component {
                                         }
                                         this.incrementNumber();
                                         this.addToResponseArray();
-                                        // this.addToResponseArray(this.state.responseBody);
                                         this.setState({ responseBody: '' });
                                     }}
                                 >

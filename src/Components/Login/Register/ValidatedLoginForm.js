@@ -3,7 +3,6 @@ import TokenService from '../../../Services/token-service'
 import IcebergApiService from '../../../Services/iceberg-api-service'
 
 import './LoginRegister.css'
-import { Link } from 'react-router-dom';
 
 export default function ValidatedRegistrationForm () {
 

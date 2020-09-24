@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import '../QuestionBox/QuestionBox.css'
-import config from '../../../config'
 import questionService from '../QuestionService'
 import ExplainAccordion from '../QuestionBox/ExplainAccordion/ExplainAccordion'
 import TableView from '../QuestionBox/ExplainAccordion/tableView/tableView';
-import TokenService from '../../../Services/token-service'
+import IcebergApiService from '../../../Services/iceberg-api-service'
 
 
 export default class PastIcebergForm extends Component {
@@ -19,17 +18,11 @@ export default class PastIcebergForm extends Component {
     }
 
     componentDidMount() {
-        this.ReponsesData()
-        
+        this.ReponsesData() 
     }
 
     ReponsesData() {
-        fetch(`${config.API_ENDPOINT}/responses`, {
-            headers: {
-                'authorization': `basic ${TokenService.getAuthToken()}`,
-            },
-        })
-        .then(response => response.json())
+        IcebergApiService.getResponses()
         .then(data => {
             this.setState({
                 pastAnswer: data
@@ -41,6 +34,12 @@ export default class PastIcebergForm extends Component {
     render() {
 
         const icebergId = this.props.icebergId
+        console.log(icebergId)
+        console.log( 
+            this.state.pastAnswer
+            .slice(icebergId-1,icebergId)
+            
+        )
 
         return (
 
@@ -66,9 +65,7 @@ export default class PastIcebergForm extends Component {
                                         readOnly={true} 
                                         value=
                                         {   
-                                            //Sample, have to fill with 
                                             this.state.pastAnswer.length > 0 &&
-                                            // this.state.pastAnswer[icebergId-1].q1
                                             this.state.pastAnswer[icebergId-1]['q' + order]
                                         }   
                                     >
