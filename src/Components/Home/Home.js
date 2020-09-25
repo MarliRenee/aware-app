@@ -42,17 +42,22 @@ export default class Home extends Component {
         <section className="HowItWorks">
           <h1>How It Works</h1>
           <div className="SatirInfo">
-              <div className="SatirImage">
-                  <p>[Photo Placeholder]</p>
-              </div>
+                  <img 
+                    className="SatirImage"
+                    src="https://github.com/MarliRenee/aware-app/blob/checkpoint6/src/Assets/VirginiaSatir.jpg?raw=true"
+                    alt="A black and white photo of Virginia Satir. The photo is close cropped around her face, and she is smiling"
+                  ></img>
               <div className="VirginiaSatir">
                   <h2>The Mother of Family Therapy:</h2>
                   <h3>Virginia Satir</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel turpis elementum, porttitor risus sit amet, tempus enim. Phasellus pulvinar ipsum velit, dignissim ornare dolor venenatis eget.</p>
+                  <p>Virginia Satir pioneered the field of family reconstruction therapy. Her kid idea was that the "surface problem" itself 
+                  was seldom the real problem; rather, how people coped with the issue created the problem. She was voted the most influential 
+                  therapist in two national surveys of Psychiatrists, Psychologists, Social Workers, and Marriage and Family Therapists.</p>
               </div>
           </div>
         </section>
 
+        {/* TO-DO: Change to button & props.history.push */}
         <div className="End">
             <NavLink className="linkButton" to="/iceberg">start demo</NavLink>
         </div>
