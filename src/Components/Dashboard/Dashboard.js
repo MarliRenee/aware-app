@@ -9,12 +9,13 @@ import { NavLink } from 'react-router-dom';
 export default class Dashboard extends Component {
 
   static contextType = IcebergListContext
-  
+
   componentDidMount() {
     this.context.clearError()
     IcebergApiService.getIcebergs()
       .then(this.context.setIcebergList)
       .catch(this.context.setError)
+
   }
 
   renderIcebergs() {
@@ -31,6 +32,7 @@ export default class Dashboard extends Component {
     return (
       <main className='Dashboard'>
         <header>
+          {/* TO-DO *** ADD PERSONALIZED USER NAME GREETING */}
           <h1>Welcome</h1>
           <div className="Explore">
             <NavLink className="linkButton" to="/iceberg">New Iceberg</NavLink>

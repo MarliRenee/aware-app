@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom';
 import { format } from 'date-fns'
 import PastIcebergForm from './PastIcebergForm'
 import IcebergApiService from '../../../Services/iceberg-api-service'
@@ -50,6 +49,7 @@ export default class PastIceberg extends Component {
 
                 <h2>Past Iceberg</h2>
                 <div className="CompletedDate">
+                {/* TO-DO **** DATE OCCASIONALLY REPEATING UNECESSARILY? */}
                     {this.state.listItems.length > 0 &&
                     this.state.listItems
                         .slice(icebergId-1)

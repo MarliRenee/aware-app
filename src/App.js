@@ -7,6 +7,8 @@ import ValidatedLoginForm from "./Components/Login/Register/ValidatedLoginForm";
 import NavBar from "./Components/NavBar/Navbar";
 import NotFoundPage from "./Components/NotFoundPage/NotFoundPage"
 import PastIceberg from "./Components/Iceberg/PastIceberg/PastIceberg"
+import PrivateRoute from '../src/Components/Utils/PrivateRoute'
+import PublicOnlyRoute from '../src/Components/Utils/PublicRoute'
 
 import './App.css'
 
@@ -37,16 +39,16 @@ class App extends Component {
               component={Iceberg}   
             />
 
-            <Route 
+            <PrivateRoute  
               exact path={"/iceberg/:icebergId"}
               component={PastIceberg}
             />
            
-            <Route 
+            <PrivateRoute 
               exact path="/dashboard" 
               component={Dashboard}   
             />
-            <Route 
+            <PublicOnlyRoute 
               exact path="/login" 
               component={ValidatedLoginForm}   
             />

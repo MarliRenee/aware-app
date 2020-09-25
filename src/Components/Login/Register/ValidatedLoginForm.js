@@ -10,11 +10,6 @@ export default function ValidatedRegistrationForm () {
   const [password, setPassword] = useState("");
   const [errorVisible, setError] = useState(false);
 
-  // function validate () {
-  //   IcebergApiService.getIcebergs()
-  //     .catch(error => setError(true))  
-  // } 
-
   function handleSubmit(e) {
     e.preventDefault();
 

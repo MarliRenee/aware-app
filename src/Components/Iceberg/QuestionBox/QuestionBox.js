@@ -68,11 +68,18 @@ export default class QuestionBox extends Component {
         e.preventDefault();
 
         IcebergApiService.postIceberg()
-        .then(res =>
-            this.postResponses(res.id),
+        .then(idData => {
+            console.log(idData)
+            this.setState({
+                icebergId: Object.values(idData)[0]
+            })
+            this.postResponses(this.state.icebergId)
+        })
+        .then(response =>
             //TO-DO *** Change to history.props
-            window.location.href="/dashboard"
-        )
+            {window.location.href="/dashboard"}
+        ) 
+        
     }
 
     postResponses(icebergId) {

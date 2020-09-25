@@ -82,7 +82,7 @@ const IcebergApiService = {
       )
   },
 
-  postResponses() {
+  postResponses(icebergId) {
     return fetch(`${config.API_ENDPOINT}/responses`, {
       method: 'POST',
       headers: {

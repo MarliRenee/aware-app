@@ -1,10 +1,29 @@
 import React, {Component} from 'react'
-import { Link } from 'react-router-dom'
+import TokenService from '../../../../Services/token-service'
 import './End.css'
 
 
 class End extends Component {
 
+    state = {
+        saveVisible: false
+    }
+
+    componentDidMount() {
+        this.checkLoggedIn()
+    }
+   
+    //TO-DO *** CHANGE TO PROPS HISTORY
+    link() {
+        window.location.href="/iceberg"
+    }
+
+    checkLoggedIn() {
+        if (TokenService.hasAuthToken() === true){
+            this.setState({ saveVisible: true})
+        } else (this.setState({ saveVisible: false}))
+    }
+    
     render() {
         return (
 
@@ -22,16 +41,17 @@ class End extends Component {
 
                     {/* //IF NOT SIGNED IN, DIRECTS TO SIGN IN/SIGN UP, THEN POSTS TO ARCHIVE */}
                     {/* Consider sign in as pop up so it doesn't direct away from the main page */}
-                    <button 
-                        className="linkButton" 
-                        onClick={this.props.handleSave}
-                    >
-                       Save
-                    </button>
                     
+                    {this.state.saveVisible && 
+    
+                        <button onClick={this.props.handleSave}
+                        >
+                        Save
+                        </button>
+                    }
 
-                    <button className="linkButton" >
-                        <Link to='/iceberg'>New Iceberg</Link>
+                    <button onClick={this.link}>
+                        New Iceberg
                     </button>
                 </div>
             </section>
