@@ -59,4 +59,4 @@ class End extends Component {
     }
 }
 
-export default End;
+export default End

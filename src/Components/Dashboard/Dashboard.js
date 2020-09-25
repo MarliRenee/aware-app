@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import ArchiveIceberg from '../ArchiveIceberg/ArchiveIceberg.js'
 import IcebergApiService from '../../Services/iceberg-api-service'
 import IcebergListContext from '../../Contexts/IcebergListContext'
 import PastIcebergList from '../Iceberg/PastIcebergList'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
 
 export default class Dashboard extends Component {
@@ -32,7 +32,7 @@ export default class Dashboard extends Component {
     return (
       <main className='Dashboard'>
         <header>
-          {/* TO-DO *** ADD PERSONALIZED USER NAME GREETING */}
+          {/* TO-DO *** ADD PERSONALIZED USER NAME GREETING {this.props.username} */}
           <h1>Welcome</h1>
           <div className="Explore">
             <NavLink className="linkButton" to="/iceberg">New Iceberg</NavLink>
@@ -42,7 +42,7 @@ export default class Dashboard extends Component {
         <PastIcebergList />
 
     </main>
-  );
+  )
   }
   
 }

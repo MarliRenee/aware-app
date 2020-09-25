@@ -9,10 +9,10 @@ import './PastIcebergList.css'
 export default class IcebergListTest extends Component {
    
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
           listItems: [],
-        };
+        }
         
     }
 
@@ -26,7 +26,7 @@ export default class IcebergListTest extends Component {
             this.setState({
                 listItems: data
             })
-        }); 
+        }) 
         
     }
 

@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import TokenService from '../../Services/token-service'
 import './Navbar.css'
 
 
-//RENDER LOGIN LINK only showing after refresh??
+//TO-DO *** RERENDER LOGIN LINK after state change: https://stackoverflow.com/questions/60142398/react-doesnt-update-the-view-after-login
+//Currenty it only re-renders on a page refresh
 
 export default class Navbar extends Component {
 
-  // handleLogoutClick = () => {
-  // }
+  handleLogoutClick = () => {
+    TokenService.clearAuthToken()
+  }
 
   renderLogoutLink() {
     return (
       <div className='Header__logged-in'>
         <Link
-          // onClick={this.handleLogoutClick}
+          onClick={this.handleLogoutClick}
           to='/'>
           Logout
         </Link>

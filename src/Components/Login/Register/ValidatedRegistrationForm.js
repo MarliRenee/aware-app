@@ -1,27 +1,26 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 import TokenService from '../../../Services/token-service'
 import IcebergApiService from '../../../Services/iceberg-api-service'
-
 
 import './LoginRegister.css'
 
 export default function ValidatedRegistrationForm () {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorVisible, setError] = useState(false);
-  const [thankYouVisible, setThankYou] = useState(false);
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [errorVisible, setError] = useState(false)
+  const [thankYouVisible, setThankYou] = useState(false)
  
   function validateForm() {
-    return username.length > 0 && password.length > 0;
+    return username.length > 0 && password.length > 0
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
 
     TokenService.saveAuthToken(
       TokenService.makeBasicAuthToken(username, password),
-    );
+    )
     const user = {
       username: username,
       password: password,
@@ -32,6 +31,9 @@ export default function ValidatedRegistrationForm () {
       if (responseJson.status === 500) {setError(true)}
       else{setThankYou(true)}
     })
+
+    
+
   }
 
   return (
@@ -71,7 +73,7 @@ export default function ValidatedRegistrationForm () {
           </div>
       </form>
     </div>
-  );
+  )
 
 }
 

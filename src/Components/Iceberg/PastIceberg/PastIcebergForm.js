@@ -8,13 +8,13 @@ import IcebergApiService from '../../../Services/iceberg-api-service'
 
 export default class PastIcebergForm extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             questionBank: questionService,
             pastAnswer: [],
             qNumber: '',
 
-        };
+        }
     }
 
     componentDidMount() {
@@ -81,6 +81,6 @@ export default class PastIcebergForm extends Component {
                 </div>
                 
             </div>
-        );   
+        )  
     } 
 }

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import "./Iceberg.css";
+import React, { Component } from 'react'
+import "./Iceberg.css"
 import QuestionBox from "./QuestionBox/QuestionBox.js"
 
 export default class Iceberg extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       showQuestionBox: false 
     }
@@ -13,7 +13,7 @@ export default class Iceberg extends Component {
   showQuestionBox = (bool) => {
     this.setState({
       showQuestionBox: bool
-    });
+    })
   }
 
   render() {
@@ -37,6 +37,6 @@ export default class Iceberg extends Component {
         }
 
       </div>
-    );   
+    )   
   } 
 }

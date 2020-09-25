@@ -13,7 +13,7 @@ export class IcebergListProvider extends Component {
   state = {
     icebergList: [],
     error: null,
-  };
+  }
 
   setIcebergList = icebergList => {
     this.setState({ icebergList })

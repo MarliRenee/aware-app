@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import ValidatedRegistrationForm from '../Login/Register/ValidatedRegistrationForm';
+import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+import ValidatedRegistrationForm from '../Login/Register/ValidatedRegistrationForm'
 import './Home.css'
 
 export default class Home extends Component {
@@ -58,7 +58,7 @@ export default class Home extends Component {
         </div>
       
       </main>
-    );
+    )
   }
   
 }

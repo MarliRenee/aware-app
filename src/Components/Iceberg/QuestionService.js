@@ -96,7 +96,7 @@ const qBank = [
     ],
     order: 8
   },
-];
+]
 
 
 

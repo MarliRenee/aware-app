@@ -1,25 +1,28 @@
 import React, { useState } from 'react'
 import TokenService from '../../../Services/token-service'
 import IcebergApiService from '../../../Services/iceberg-api-service'
+import { useHistory } from 'react-router'
 
 import './LoginRegister.css'
 
 export default function ValidatedRegistrationForm () {
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [errorVisible, setError] = useState(false)
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorVisible, setError] = useState(false);
+  const history = useHistory();
 
   function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
 
     TokenService.saveAuthToken(
       TokenService.makeBasicAuthToken(username, password),
-    );
+    )
 
     IcebergApiService.getIcebergs()
-      .then(response => {window.location.href="/dashboard"})
-      // TO-DO *** implement later: `this.props.history.push('/dashboard')`
+      .then(response => history.push({
+        pathname: '/dashboard'
+      }))
       .catch(error => {setError(true)})
 
   }
@@ -55,6 +58,6 @@ export default function ValidatedRegistrationForm () {
        
       </form>
     </div>
-  );
+  )
 
 }

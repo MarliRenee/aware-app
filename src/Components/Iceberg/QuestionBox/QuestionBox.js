@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import './QuestionBox.css'
 import config from '../../../config'
 import questionService from '../QuestionService'
 import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
-import TableView from './ExplainAccordion/tableView/tableView';
+import TableView from './ExplainAccordion/tableView/tableView'
 import IcebergApiService from '../../../Services/iceberg-api-service'
 import TokenService from '../../../Services/token-service'
 import End from './End/End'
@@ -12,7 +12,7 @@ import End from './End/End'
 
 export default class QuestionBox extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             questionBank: questionService,
             count: 1,
@@ -21,34 +21,38 @@ export default class QuestionBox extends Component {
             responseBody: '',
             responseArray: [],
             icebergId: '',
-        };
+        }
     }
 
+    static defaultProps = {
+        history: {
+        push: () => { }
+        },
+    }
     
     showEnd = (bool) => {
         this.setState({
           showEnd: bool
-        });
-      }
-
+        })
+    }
 
     scrollToBottom = () => {
-        this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+        this.messagesEnd.scrollIntoView({ behavior: "smooth" })
     }
       
     componentDidMount() {
-        this.scrollToBottom();
+        this.scrollToBottom()
     }
       
     componentDidUpdate() {
-        this.scrollToBottom();
+        this.scrollToBottom()
     }
 
 
     showEnd = (bool) => {
         this.setState({
           showQuestionBox: bool
-        });
+        })
     }
 
 
@@ -65,17 +69,17 @@ export default class QuestionBox extends Component {
     }
 
     handleSave = (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
         IcebergApiService.postIceberg()
         .then(idData => {
-            console.log(idData)
             this.setState({
                 icebergId: Object.values(idData)[0]
             })
             this.postResponses(this.state.icebergId)
         })
         .then(response =>
+            // this.props.history.push('/')
             //TO-DO *** Change to history.props
             {window.location.href="/dashboard"}
         ) 
@@ -114,7 +118,7 @@ export default class QuestionBox extends Component {
 
     render() {
 
-        const isEnabled = this.state.responseBody.length > 0;
+        const isEnabled = this.state.responseBody.length > 0
 
         return (
 
@@ -154,7 +158,7 @@ export default class QuestionBox extends Component {
                                     disabled={!isEnabled}
                                     className="QandA_Button" 
                                     onClick={() => {
-                                        this.setState({ count: this.state.count + 1 });
+                                        this.setState({ count: this.state.count + 1 })
                                         
                                         if (this.state.count > this.state.questionBank.length - 1) {
                                             this.setState({ showEnd: true})
@@ -162,9 +166,9 @@ export default class QuestionBox extends Component {
                                         else {
                                             this.setState({ showEnd: false})
                                         }
-                                        this.incrementNumber();
-                                        this.addToResponseArray();
-                                        this.setState({ responseBody: '' });
+                                        this.incrementNumber()
+                                        this.addToResponseArray()
+                                        this.setState({ responseBody: '' })
                                     }}
                                 >
                                     Submit
@@ -173,7 +177,7 @@ export default class QuestionBox extends Component {
 
                                 {/* //INVISIBLE DIV TO PUSH SCROLL DOWN */}
                                 <div style={{ float:"left", clear: "both" }}
-                                    ref={(el) => { this.messagesEnd = el; }}>
+                                    ref={(el) => { this.messagesEnd = el }}>
                                 </div>
 
                             </div> 
@@ -192,7 +196,7 @@ export default class QuestionBox extends Component {
                 
                 
             </div>
-        );   
+        )  
     } 
 }
   

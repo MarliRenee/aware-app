@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom'
-// import { NiceDate } from '../Utils/Utils'
-// import config from '../../config'
-// import IcebergListContext from '../../Contexts/IcebergListContext'
-// import IcebergApiService from '../../Services/iceberg-api-service'
+
 
 import "./ArchiveIceberg.css"
 

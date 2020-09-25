@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Switch, Route } from "react-router-dom";
-import Home from "./Components/Home/Home";
-import Iceberg from "./Components/Iceberg/Iceberg";
-import Dashboard from "./Components/Dashboard/Dashboard";
-import ValidatedLoginForm from "./Components/Login/Register/ValidatedLoginForm";
-import NavBar from "./Components/NavBar/Navbar";
+import React, { Component } from 'react'
+import { Switch, Route } from "react-router-dom"
+import Home from "./Components/Home/Home"
+import Iceberg from "./Components/Iceberg/Iceberg"
+import Dashboard from "./Components/Dashboard/Dashboard"
+import ValidatedLoginForm from "./Components/Login/Register/ValidatedLoginForm"
+import NavBar from "./Components/NavBar/Navbar"
 import NotFoundPage from "./Components/NotFoundPage/NotFoundPage"
 import PastIceberg from "./Components/Iceberg/PastIceberg/PastIceberg"
 import PrivateRoute from '../src/Components/Utils/PrivateRoute'
@@ -14,7 +14,10 @@ import './App.css'
 
 class App extends Component {
 
-  state = { hasError: false }
+  state = { 
+    hasError: false,
+    username: "test"
+  }
 
   static getDerivedStateFromError(error) {
     console.error(error)
@@ -22,6 +25,7 @@ class App extends Component {
   }
   
   render() {
+
     return (
       <div className='App'>
         <header className='App__header'>
@@ -32,7 +36,7 @@ class App extends Component {
             <Route
               exact
               path={'/'}
-              component={Home}
+              component={Home} 
             />
            <Route 
               exact path="/iceberg" 
@@ -46,6 +50,8 @@ class App extends Component {
            
             <PrivateRoute 
               exact path="/dashboard" 
+              // TO-DO *** Discuss with mentor: trying to passs username up to App so I can access it in Dashboard. the below causes errors. 
+              // render={(props) => <Dashboard {...props} username={"test"} />}
               component={Dashboard}   
             />
             <PublicOnlyRoute 
@@ -63,4 +69,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
