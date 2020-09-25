@@ -38,6 +38,8 @@ export default function ValidatedRegistrationForm () {
 
   return (
     <div className="Login">
+      <h2>Sign-Up</h2>
+      <p>Create an account to save your iceberg journey and track patterns over time</p>
       <form onSubmit={handleSubmit}>
           <h3>Username</h3>
           <input
@@ -53,7 +55,7 @@ export default function ValidatedRegistrationForm () {
             type="password"
           />
           <div>
-            <button disabled={!validateForm()} type="submit" >
+            <button className="submitButton" disabled={!validateForm()} type="submit" >
               Register
             </button>
 

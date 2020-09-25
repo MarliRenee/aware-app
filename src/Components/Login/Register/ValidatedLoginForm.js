@@ -51,8 +51,8 @@ export default function ValidatedRegistrationForm () {
             Username or password is incorrect. 
           </div>
         }
-
-        <button type="submit">
+        
+        <button className="submitButton" type="submit">
           Log In
         </button>
        

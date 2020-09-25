@@ -23,6 +23,10 @@ button {
     background: #C4C4C4;
     margin: 10px;
     font-size: 14px;
+    display: block;
+    /* margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px; */
 }   
 
 .linkButton {
@@ -38,7 +42,6 @@ button {
 }
 
 section {
-    min-height: 200px;
     padding: 6% 0;
 }
 

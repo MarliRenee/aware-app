@@ -4,27 +4,21 @@
     margin-bottom: 40px;
 }
 
-.rectangleInfo {
-    align-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.exploreButton {
+    margin: auto;
 }
 
-.rectangle1 {
-    background: #C4C4C4;
-    height: 250px;
-    width: 250px;
-    margin: 20px;
-    padding: 10px;
+.icebergImage {
+    width: 60%;
+    max-width: 300px;
+    display: block;
+    margin:auto;
+    margin-top: 25px;
 }
 
-.rectangle2 {
-    background: #C4C4C4;
-    height: 250px;
-    width: 250px;
-    margin: 20px;
-    padding: 10px;
+.Register {
+    border: 1px solid grey;
+    border-radius: 3px;
 }
 
 .HowItWorks {

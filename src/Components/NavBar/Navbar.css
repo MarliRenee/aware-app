@@ -14,6 +14,7 @@ a {
     padding: 8px;
     color: rgb(53, 53, 53);
     text-decoration: none;
+    background-color: transparent;
 }
 
 .logo {

@@ -3,10 +3,12 @@ import './QuestionBox.css'
 import config from '../../../config'
 import questionService from '../QuestionService'
 import ExplainAccordion from './ExplainAccordion/ExplainAccordion'
-import TableView from './ExplainAccordion/tableView/tableView'
+//import TableView from './ExplainAccordion/tableView/tableView'
 import IcebergApiService from '../../../Services/iceberg-api-service'
 import TokenService from '../../../Services/token-service'
 import End from './End/End'
+
+//Everything currently commented out is the WIP for question-specific Vocab Prompts
 
 //TO-DO *** SUBMIT DISABLED AFFECTS ALL BUTTONS, NOT ONLY CURRENT QUESTION BUTTON 
 
@@ -21,6 +23,9 @@ export default class QuestionBox extends Component {
             responseBody: '',
             responseArray: [],
             icebergId: '',
+            //vocabArrayData: [],
+            //vocabHelpVisible: false,
+
         }
     }
 
@@ -29,6 +34,23 @@ export default class QuestionBox extends Component {
         push: () => { }
         },
     }
+
+    //TO-DO *** Vocab Options for pertinent questions
+    // setVocabArrayData() {
+    //     {this.state.questionBank.length > 0 && 
+    //         this.state.questionBank
+    //         .slice(0, this.state.count)
+    //         .map(({vocabArray}) => 
+    //             this.setState(
+    //                 {vocabArrayData: {vocabArray}}
+    //             )
+    //         )
+    //     }
+    //     console.log(this.state.vocabArrayData)
+    //     if(this.state.vocabArrayData < 1) {
+    //         this.setState({vocabHelpVisible: false })
+    //     } else{this.setState({vocabHelpVisible: true })}
+    // }
     
     showEnd = (bool) => {
         this.setState({
@@ -41,6 +63,7 @@ export default class QuestionBox extends Component {
     }
       
     componentDidMount() {
+        //this.setVocabArrayData()
         this.scrollToBottom()
     }
       
@@ -145,13 +168,14 @@ export default class QuestionBox extends Component {
                                     >
                                     </textarea>
                                 </div>
-
-
-                                <ExplainAccordion 
+                                
+                                {/* {this.state.vocabHelpVisible &&
+                                    <ExplainAccordion 
                                     title={"Vocab Help"} 
                                     body={<TableView data={(vocabArray)}/>}
-                                />
-
+                                    />
+                                } */}
+                                
 
                                 <button 
                                     type="submit"
@@ -169,6 +193,7 @@ export default class QuestionBox extends Component {
                                         this.incrementNumber()
                                         this.addToResponseArray()
                                         this.setState({ responseBody: '' })
+                                        this.setVocabArrayData()
                                     }}
                                 >
                                     Submit
@@ -181,7 +206,6 @@ export default class QuestionBox extends Component {
                                 </div>
 
                             </div> 
-                            
                         )
                     )}
             

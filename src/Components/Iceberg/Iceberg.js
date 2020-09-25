@@ -25,7 +25,7 @@ export default class Iceberg extends Component {
         <header>
           <h1>The Personal Iceberg</h1>
           <h3>Emotions are just the surface...</h3>
-          <button onClick={this.showQuestionBox.bind(null, true)}>
+          <button className="deepDiveButton" onClick={this.showQuestionBox.bind(null, true)}>
             Deep dive
           </button>
         </header>

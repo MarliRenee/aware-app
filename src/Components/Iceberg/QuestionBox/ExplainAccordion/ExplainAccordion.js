@@ -27,9 +27,8 @@ export default class ExplainAccordion extends React.Component {
                             </div>
                             
                         </AccordionButton>
-                    <AccordionPanel>
+                    <AccordionPanel className="AccordionText">
                         {this.props.body}
-                        
                     </AccordionPanel>
                 </AccordionItem>
             </Accordion>
