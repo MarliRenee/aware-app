@@ -20,8 +20,9 @@ button {
     height: 40px;
     top: 220px; 
     text-transform: uppercase;
-    background: #C4C4C4;
-    margin: 10px;
+    background: #2c2c2c;
+    color: white;
+    margin: auto;
     font-size: 14px;
     display: block;
     /* margin: auto;
@@ -32,12 +33,7 @@ button {
 .linkButton {
     border: 0;
     text-transform: uppercase;
-    background: #C4C4C4;
-    padding: 10px;
-    height: 40px;
-    text-align: center;
-    display: inline-flex;
-    margin: 10px;
+    color: white;
     font-size: 14px;
 }
 

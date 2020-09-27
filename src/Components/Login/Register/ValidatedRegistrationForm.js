@@ -41,14 +41,13 @@ export default function ValidatedRegistrationForm () {
       <h2>Sign-Up</h2>
       <p>Create an account to save your iceberg journey and track patterns over time</p>
       <form onSubmit={handleSubmit}>
-          <h3>Username</h3>
+      <label for="username"><h3>Username:</h3></label>
           <input
-            autoFocus
             type="text"
             value={username}
             onChange={e => setUsername(e.target.value)}
           />
-          <h3>Password</h3>
+          <label for="password"><h3>Password:</h3></label>
           <input
             value={password}
             onChange={e => setPassword(e.target.value)}
@@ -61,7 +60,7 @@ export default function ValidatedRegistrationForm () {
 
             {thankYouVisible && 
               <div>
-                Thank you! You can view your dashboard <NavLink to="/dashboard">here</NavLink>
+                Thank you! You can view your dashboard <NavLink to="/dashboard"><b>here</b></NavLink>
               </div>
             }
 

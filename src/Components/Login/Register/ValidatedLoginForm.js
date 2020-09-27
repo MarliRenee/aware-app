@@ -30,7 +30,7 @@ export default function ValidatedRegistrationForm () {
   return (
     <div className="Login">
       <form onSubmit={handleSubmit}>
-        <h3>Username</h3>
+        <label for="username"><h3>Username:</h3></label>
         <input
           required
           autoFocus
@@ -38,7 +38,7 @@ export default function ValidatedRegistrationForm () {
           value={username}
           onChange={e => setUsername(e.target.value)}
         />
-        <h3>Password</h3>
+         <label for="password"><h3>Password:</h3></label>
         <input
           required
           value={password}
