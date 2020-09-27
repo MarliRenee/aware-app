@@ -193,7 +193,7 @@ export default class QuestionBox extends Component {
                                         this.incrementNumber()
                                         this.addToResponseArray()
                                         this.setState({ responseBody: '' })
-                                        this.setVocabArrayData()
+                                        //this.setVocabArrayData()
                                     }}
                                 >
                                     Submit
