@@ -1,6 +1,7 @@
 .TellMeMore {
     display: inline;
     text-align: left;
+    color: black;
 }
 
 .Title {
@@ -27,7 +28,8 @@
     left: 100px;
     top: 220px; 
     text-transform: uppercase;
-    background: #C4C4C4;
+    color: white;
+    background: #2e2e2e;
     float: right;
     font-size: 12px;
 }

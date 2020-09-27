@@ -34,9 +34,9 @@ export default class Dashboard extends Component {
         <header>
           {/* TO-DO *** ADD PERSONALIZED USER NAME GREETING {this.props.username} */}
           <h1>Welcome</h1>
-          <div className="Explore">
+          <button className="Explore">
             <NavLink className="linkButton" to="/iceberg">New Iceberg</NavLink>
-          </div>
+          </button>
         </header>
 
         <PastIcebergList />
