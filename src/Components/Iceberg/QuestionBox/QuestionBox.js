@@ -58,7 +58,7 @@ export default class QuestionBox extends Component {
       
     componentDidMount() {
         //this.setVocabArrayData()
-        this.scrollToBottom()
+        // this.scrollToBottom()
     }
       
     componentDidUpdate() {

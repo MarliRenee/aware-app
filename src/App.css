@@ -64,4 +64,8 @@ p {
 input {
     font-size: inherit;
 }
+
+textarea {
+    font-size: inherit;
+}
   
