@@ -85,19 +85,6 @@ export default class QuestionBox extends Component {
         })
     }
 
-    // handleSave = (e) => {
-    //     e.preventDefault()
-
-    //     IcebergApiService.postIceberg()
-    //     .then(idData => {
-    //         this.setState({
-    //             icebergId: Object.values(idData)[0]
-    //         })
-    //         this.postResponses(this.state.icebergId) 
-    //     })
-    //     .then(results => { window.location.href="/dashboard"})  
-    // }
-
     handleSave = (e) => {
         e.preventDefault()
 

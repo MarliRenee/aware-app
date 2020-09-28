@@ -22,8 +22,7 @@ export default class Iceberg extends Component {
     })
   }
 
-  ///*** ADDED FOR QUESTION BOX*////
-  goToDashboard() {
+  goToDashboard = () => {
     this.props.history.push(`/dashboard`)
   }
 
