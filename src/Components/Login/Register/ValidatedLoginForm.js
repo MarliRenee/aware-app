@@ -57,7 +57,9 @@ export default function ValidatedRegistrationForm () {
         </button>
        
       </form>
+
     </div>
+    
   )
 
 }

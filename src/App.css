@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;  
-    background-color: rgb(235, 235, 235);
-
 }
 
 header {
@@ -10,18 +8,20 @@ header {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #444;
+    color:whitesmoke;
     text-align: center;
+    background-image: linear-gradient( to bottom, #549b9a, #04312d);
 }
 
 button {
     border: 0;
+    border-radius: 25px;
     width: 120px;
     height: 40px;
     top: 220px; 
     text-transform: uppercase;
-    background: #2c2c2c;
-    color: white;
+    background: whitesmoke;
+    color: rgb(29, 29, 29);
     margin: auto;
     font-size: 14px;
     display: block;
@@ -33,7 +33,7 @@ button {
 .linkButton {
     border: 0;
     text-transform: uppercase;
-    color: white;
+    color: rgb(29, 29, 29);
     font-size: 14px;
 }
 
@@ -55,6 +55,7 @@ h2 {
 h3 {
     margin: 20px 0px;
     font-size: 16px;
+    font-weight: normal;
 }
 
 p {

@@ -1,8 +1,13 @@
 input {
-    border: 1px solid gray;
-    border-radius: 3px;
+    border: 1px solid whitesmoke;
+    opacity: .25;
+    border-radius: 20px;
     height: 30px;
     width: 200px;
+}
+
+input:focus {
+    outline: none !important;
 }
 
 .submitButton {

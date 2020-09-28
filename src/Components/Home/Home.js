@@ -12,7 +12,7 @@ export default class Home extends Component {
 
         <header>
           <h1>Understand Your Emotions</h1>
-          <h3>With simple prompts, the Iceberg Model will guide you to greater self-understanding</h3>
+          <h3>With eight simple prompts, the Iceberg Model will guide you to greater self-awareness</h3>
               <button className="exploreButton" >
                 <NavLink className="linkButton" to="/iceberg">explore</NavLink>
               </button>
