@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Route } from "react-router-dom"
+import { Switch, Route, withRouter } from "react-router-dom"
 import Home from "./Components/Home/Home"
 import Iceberg from "./Components/Iceberg/Iceberg"
 import Dashboard from "./Components/Dashboard/Dashboard"
@@ -69,4 +69,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default withRouter(App)
