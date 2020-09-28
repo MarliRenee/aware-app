@@ -18,7 +18,7 @@ export default class Home extends Component {
               </button>
             <img 
               className="icebergImage"
-              src="https://github.com/MarliRenee/aware-app/blob/checkpoint6/src/Assets/IcebergVector.png?raw=true"
+              src="https://github.com/MarliRenee/aware-app/blob/styling/src/Assets/IcebergVectorWhite.png?raw=true"
               alt="A clean black and white vector of an iceberg"
             >
             </img>

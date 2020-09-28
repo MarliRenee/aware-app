@@ -10,7 +10,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color:whitesmoke;
     text-align: center;
-    background-image: linear-gradient( to bottom, #549b9a, #04312d);
+    background: linear-gradient( to bottom, #549b9a, #04312d) fixed;
+}
+
+html {
+    height: 100%;
 }
 
 button {
@@ -21,7 +25,7 @@ button {
     top: 220px; 
     text-transform: uppercase;
     background: whitesmoke;
-    color: rgb(29, 29, 29);
+    color:  #04312d;
     margin: auto;
     font-size: 14px;
     display: block;
@@ -33,7 +37,7 @@ button {
 .linkButton {
     border: 0;
     text-transform: uppercase;
-    color: rgb(29, 29, 29);
+    color:  #04312d;
     font-size: 14px;
 }
 
