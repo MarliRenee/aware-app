@@ -95,10 +95,9 @@ export default class QuestionBox extends Component {
     //         })
     //         this.postResponses(this.state.icebergId) 
     //     })
-    //     .then(results => { window.location.href="/dashboard"})
-        
-        
+    //     .then(results => { window.location.href="/dashboard"})  
     // }
+
     handleSave = (e) => {
         e.preventDefault()
 
@@ -110,10 +109,8 @@ export default class QuestionBox extends Component {
         })
         .then(icebergId => { 
             this.postResponses(this.state.icebergId) 
-            this.props.goToDashboard() //********//////
-        })
-        
-        
+            this.props.dashboardLink() 
+        }) 
     }
 
     postResponses(icebergId) {

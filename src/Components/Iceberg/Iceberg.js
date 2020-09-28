@@ -10,6 +10,12 @@ export default class Iceberg extends Component {
     }
   }
 
+  static defaultProps = {
+    history: {
+    push: () => { }
+    },
+}
+
   showQuestionBox = (bool) => {
     this.setState({
       showQuestionBox: bool
