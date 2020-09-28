@@ -17,6 +17,10 @@ export default class Navbar extends Component {
     return (
       <div className='Header__logged-in'>
         <Link
+          to='/dashboard'>
+          Dashboard
+        </Link>
+        <Link
           onClick={this.handleLogoutClick}
           to='/'>
           Logout

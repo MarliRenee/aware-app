@@ -10,7 +10,6 @@ li {
 }
 
 a {
-    display: block;
     padding: 8px;
     color: rgb(53, 53, 53);
     text-decoration: none;
@@ -21,11 +20,3 @@ a {
     float: left;
     font-weight: 800;
 }
-  
-/* li a {
-display: block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-} */
