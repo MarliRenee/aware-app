@@ -29,12 +29,6 @@ export default class QuestionBox extends Component {
         }
     }
 
-    static defaultProps = {
-        history: {
-        push: () => { }
-        },
-    }
-
     //TO-DO *** Vocab Options for pertinent questions
     // setVocabArrayData() {
     //     {this.state.questionBank.length > 0 && 
@@ -91,6 +85,20 @@ export default class QuestionBox extends Component {
         })
     }
 
+    // handleSave = (e) => {
+    //     e.preventDefault()
+
+    //     IcebergApiService.postIceberg()
+    //     .then(idData => {
+    //         this.setState({
+    //             icebergId: Object.values(idData)[0]
+    //         })
+    //         this.postResponses(this.state.icebergId) 
+    //     })
+    //     .then(results => { window.location.href="/dashboard"})
+        
+        
+    // }
     handleSave = (e) => {
         e.preventDefault()
 
@@ -99,13 +107,12 @@ export default class QuestionBox extends Component {
             this.setState({
                 icebergId: Object.values(idData)[0]
             })
-            this.postResponses(this.state.icebergId)
         })
-        .then(response =>
-            // this.props.history.push('/')
-            //TO-DO *** Change to history.props
-            {window.location.href="/dashboard"}
-        ) 
+        .then(icebergId => { 
+            this.postResponses(this.state.icebergId) 
+            this.props.goToDashboard() //********//////
+        })
+        
         
     }
 

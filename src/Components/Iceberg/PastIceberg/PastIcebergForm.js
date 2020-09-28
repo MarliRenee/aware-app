@@ -33,7 +33,7 @@ export default class PastIcebergForm extends Component {
 
     render() {
 
-        const icebergId = this.props.icebergId
+        const icebergId = this.props.icebergId - 1;
 
         return (
 
@@ -59,8 +59,12 @@ export default class PastIcebergForm extends Component {
                                         readOnly={true} 
                                         value=
                                         {   
-                                            this.state.pastAnswer.length > 0 &&
-                                            this.state.pastAnswer[icebergId-1]['q' + order]
+                                            this.state.pastAnswer, 
+                                            // console.log(icebergId),
+                                            console.log(this.state.pastAnswer)
+                                            // console.log(Object.values()[9])
+                                            // this.state.pastAnswer.length > 0 &&
+                                            // this.state.pastAnswer[icebergId-1]['q' + order]
                                         }   
                                     >
                                     </textarea>

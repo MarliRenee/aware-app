@@ -16,6 +16,11 @@ export default class Iceberg extends Component {
     })
   }
 
+  ///*** ADDED FOR QUESTION BOX*////
+  goToDashboard() {
+    this.props.history.push(`/dashboard`)
+  }
+
   render() {
 
     return (
@@ -32,7 +37,7 @@ export default class Iceberg extends Component {
 
         { this.state.showQuestionBox && (
           <div>
-            <QuestionBox  />
+            <QuestionBox dashboardLink={this.goToDashboard}/>
           </div>) 
         }
 
