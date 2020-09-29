@@ -1,9 +1,13 @@
+.IcebergList ul {
+    margin: 15px;
+}
+
 .IcebergArchive {
     border-radius: 25px;
     color: #04312d;
-    margin: auto;
     display: flex;
     float: none;
+    margin: auto;
     background-color: whitesmoke;
     max-width: 500px;
 }
@@ -11,7 +15,6 @@
 .IcebergArchive:hover {
     border-radius: 25px;
     color: #04312d;
-    margin: auto;
     display: flex;
     float: none;
     background-color: whitesmoke;
@@ -24,6 +27,4 @@
     margin-left: 10px;
 }
 
-.IcebergArchive li {
-    list-style: none;
-}
+
