@@ -41,37 +41,39 @@ export default function ValidatedRegistrationForm () {
       <h2>Sign-Up</h2>
       <p>Create an account to save your iceberg journey and track patterns over time</p>
       <form onSubmit={handleSubmit}>
-      <label htmlFor="username"><h3>Username:</h3></label>
-          <input
-            type="text"
-            value={username}
-            onChange={e => setUsername(e.target.value)}
-          />
-          <label htmlFor="password"><h3>Password:</h3></label>
-          <input
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            type="password"
-          />
-          <div>
-            <button className="submitButton" disabled={!validateForm()} type="submit" >
-              Register
-            </button>
+        <label htmlFor="username"></label>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={e => setUsername(e.target.value)}
+        />
+        <label htmlFor="password"></label>
+        <input
+          value={password}
+          placeholder="Password"
+          onChange={e => setPassword(e.target.value)}
+          type="password"
+        />
+        <div>
+          <button className="submitButton" disabled={!validateForm()} type="submit" >
+            Register
+          </button>
 
-            {thankYouVisible && 
-              <div>
-                Thank you! You can view your dashboard <NavLink to="/dashboard"><b>here</b></NavLink>
-              </div>
-            }
+          {thankYouVisible && 
+            <div className="response">
+              Thank you! You can view your dashboard <NavLink to="/dashboard"><b>here</b></NavLink>
+            </div>
+          }
 
-            {errorVisible && 
-              <div>
-                That username is already taken.
-              </div>
-            }
-           
-           
-          </div>
+          {errorVisible && 
+            <div className="response">
+              That username is already taken.
+            </div>
+          }
+          
+          
+        </div>
       </form>
     </div>
   )

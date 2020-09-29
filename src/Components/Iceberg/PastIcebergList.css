@@ -1,9 +1,27 @@
 .IcebergArchive {
-    border: 1px solid gray;
-    border-radius: 3px;
-    margin: 5%;
+    border-radius: 25px;
+    color: #04312d;
+    margin: auto;
     display: flex;
     float: none;
+    background-color: whitesmoke;
+    max-width: 500px;
+}
+
+.IcebergArchive:hover {
+    border-radius: 25px;
+    color: #04312d;
+    margin: auto;
+    display: flex;
+    float: none;
+    background-color: whitesmoke;
+    max-width: 500px;
+    opacity: .75;
+}
+
+.IcebergArchive a {
+    color: #04312d;
+    margin-left: 10px;
 }
 
 .IcebergArchive li {

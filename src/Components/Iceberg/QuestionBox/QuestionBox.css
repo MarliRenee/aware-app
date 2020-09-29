@@ -1,3 +1,43 @@
+.QuestionBox {
+    margin: auto;
+    margin-top: 25px;
+}
+
+/* .Questions {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    text-align: left;
+} */
+
+.IndividualQuestion {
+    padding: 9%;
+    margin-bottom: 40px;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    text-align: left;
+    display: inline-block;
+}
+
+.Questions  h2 {
+    color:  #04312d;
+}
+
+.Questions  h3 {
+    color:  #04312d;
+    margin-bottom: 5px;
+}
+
+.Questions  p {
+    color:  #04312d;
+}
+
+.Questions  text {
+    color:  #04312d;
+}
+
+
 .TellMeMore {
     display: inline;
     text-align: left;
@@ -6,15 +46,6 @@
 
 .Title {
     text-align: left;
-}
-
-.Questions {
-    text-align: left;
-}
-
-.IndividualQuestion {
-    padding: 5%;
-    margin-bottom: 40px;
 }
 
 .Answer {
@@ -27,19 +58,32 @@
     height: 25px;
     left: 100px;
     top: 220px; 
+    margin-top: 15px;
     text-transform: uppercase;
     color: white;
-    background: #2e2e2e;
+    background: #549b9a;
     float: right;
     font-size: 12px;
 }
 
+.QandA_Button:disabled {
+    opacity: .25;
+    background-color: #549b9a;
+}
+
+.QandA_Button:hover {
+    opacity: .25;
+    background-color: #549b9a;
+}
+
 textarea {
     margin: 0;
+    border-radius: 5px;
     width:100%;
     min-height:150px; 
-    font-family: "Open Sans", sans-serif; 
-    color: #444;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 12px;
+    color: #04312d;
     font-size: 12px;
 }
 

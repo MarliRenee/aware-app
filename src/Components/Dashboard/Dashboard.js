@@ -3,7 +3,8 @@ import ArchiveIceberg from '../ArchiveIceberg/ArchiveIceberg.js'
 import IcebergApiService from '../../Services/iceberg-api-service'
 import IcebergListContext from '../../Contexts/IcebergListContext'
 import PastIcebergList from '../Iceberg/PastIcebergList'
-import { NavLink } from 'react-router-dom'
+
+import './Dashboard.css'
 
 
 export default class Dashboard extends Component {
@@ -26,6 +27,9 @@ export default class Dashboard extends Component {
     )
   }
 
+  linkIceberg = () => {
+    this.props.history.push('/iceberg')
+  }
 
   render() {
 
@@ -34,8 +38,9 @@ export default class Dashboard extends Component {
         <header>
           {/* TO-DO *** ADD PERSONALIZED USER NAME GREETING {this.props.username} */}
           <h1>Welcome</h1>
-          <button className="Explore">
-            <NavLink className="linkButton" to="/iceberg">New Iceberg</NavLink>
+          <button className="Explore" onClick={this.linkIceberg}>
+            New Iceberg
+            {/* <NavLink className="linkButton" to="/iceberg">New Iceberg</NavLink> */}
           </button>
         </header>
 

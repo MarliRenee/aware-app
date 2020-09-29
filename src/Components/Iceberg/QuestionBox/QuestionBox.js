@@ -150,7 +150,6 @@ export default class QuestionBox extends Component {
                                     title={"Tell Me More"} 
                                     body={TellMeMoreText}
                                 />
-
                                 <div className="textArea">
                                     <textarea 
                                         placeholder = {example}

@@ -4,6 +4,12 @@ input {
     border-radius: 20px;
     height: 30px;
     width: 200px;
+    margin: 15px;
+    padding-left: 10px;
+}
+
+input::placeholder {
+   color:  #04312d;
 }
 
 input:focus {
@@ -25,11 +31,23 @@ input:focus {
 }
 
 button:disabled {
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  color: #04312d;
+  opacity: .15;
+}
+
+button:disabled:hover {
+    border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  color: #04312d;
+  opacity: .15;
 }
 
 .buttonOveride {
     background: none;
+}
+
+.response {
+    margin: 10px;
 }

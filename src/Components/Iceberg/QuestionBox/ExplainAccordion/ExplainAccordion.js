@@ -13,25 +13,25 @@ export default class ExplainAccordion extends React.Component {
     render() {
 
         return (
-            
-            <Accordion collapsible>
+            <div className="Accordion">
+                <Accordion collapsible>
                 <AccordionItem>
-                        <AccordionButton className="AccordionText">
-                            
-                            <div className="helpButton">
-                                ?
-                            </div>
-
-                            <div className="TellMeMore">
-                                {this.props.title}
-                            </div>
-                            
-                        </AccordionButton>
+                    <AccordionButton className="AccordionButton">
+                        <div className="TellMeMore">
+                            {this.props.title + '...'}
+                        </div>
+                        
+                    </AccordionButton>
                     <AccordionPanel className="AccordionText">
-                        {this.props.body}
+                        <div className="speech-bubble">
+                            <div className="speech-bubble-ds__arrow"></div>
+                            {this.props.body}
+                        </div>
                     </AccordionPanel>
                 </AccordionItem>
             </Accordion>
+            </div>
+            
         )
     }
     

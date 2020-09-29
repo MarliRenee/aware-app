@@ -5,6 +5,10 @@ import './Home.css'
 
 export default class Home extends Component {
 
+  linkIceberg = () => {
+    this.props.history.push('/iceberg')
+  }
+
   render() {
 
     return (
@@ -13,8 +17,9 @@ export default class Home extends Component {
         <header>
           <h1>Understand Your Emotions</h1>
           <h3>With eight simple prompts, the Iceberg Model will guide you to greater self-awareness</h3>
-              <button className="exploreButton" >
-                <NavLink className="linkButton" to="/iceberg">explore</NavLink>
+              <button className="exploreButton" onClick={this.linkIceberg}>
+                Explore
+                {/* <NavLink className="linkButton" to="/iceberg">explore</NavLink> */}
               </button>
             <img 
               className="icebergImage"
@@ -53,9 +58,8 @@ export default class Home extends Component {
           </div>
         </section>
 
-        {/* TO-DO: Change to button & props.history.push */}
-        <button className="End">
-            <NavLink className="linkButton" to="/iceberg">start demo</NavLink>
+        <button className="End" onClick={this.linkIceberg}>
+          Start Demo
         </button>
       
       </main>

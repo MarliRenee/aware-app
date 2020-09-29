@@ -8,6 +8,14 @@
     margin: auto;
 }
 
+.End {
+    margin: auto;
+}
+
+a {
+    color: whitesmoke;
+}
+
 .icebergImage {
     width: 60%;
     max-width: 300px;
@@ -34,6 +42,7 @@
 
 .SatirImage {
     background: #C4C4C4;
+    border-radius: 15px;
     height: 250px;
     float: right;
     margin-bottom: 40px;

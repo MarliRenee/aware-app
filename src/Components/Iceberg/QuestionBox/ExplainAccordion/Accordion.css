@@ -1,14 +1,45 @@
+.Accordion {
+  margin-bottom: 10px;
+}
+
 .AccordionText {
   background-color:transparent;
   text-transform: none;
   font-size: 12px;
-  margin-bottom: 20px;
+  font-style: italic;
+  color:#04312d;
+  border-radius: 10px;
 }
 
-.helpButton {
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  float: left;
-  background-color: lightgray;
+.speech-bubble {
+  background: #c6e6e4;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  max-width: 300px;
+  padding: 15px;
+  position: relative;
+}
+
+.speech-bubble-ds__arrow {
+  border-left: 20px solid transparent;
+  border-top: 20px solid  #c6e6e4;
+  bottom: -20px;
+  content: "";
+  position: absolute;
+  right: 20px;
+}
+
+.AccordionButton {
+  background-color:transparent;
+  text-transform: none;
+  font-size: 12px;
+  color:#04312d;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.AccordionButton button {
+  padding: 0;
 }
