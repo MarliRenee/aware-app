@@ -7,12 +7,12 @@
   text-transform: none;
   font-size: 12px;
   font-style: italic;
-  color:#04312d;
+  color:#193446;
   border-radius: 10px;
 }
 
 .speech-bubble {
-  background: #c6e6e4;
+  background:#9AABB9;
   border-radius: 4px;
   margin-bottom: 40px;
   max-width: 300px;
@@ -22,7 +22,7 @@
 
 .speech-bubble-ds__arrow {
   border-left: 20px solid transparent;
-  border-top: 20px solid  #c6e6e4;
+  border-top: 20px solid  #9AABB9;
   bottom: -20px;
   content: "";
   position: absolute;
@@ -31,9 +31,10 @@
 
 .AccordionButton {
   background-color:transparent;
+  border-color: transparent;
   text-transform: none;
   font-size: 12px;
-  color:#04312d;
+  color:#193446;
   font-weight: bold;
   text-align: left;
   text-decoration: underline;
@@ -42,4 +43,12 @@
 
 .AccordionButton button {
   padding: 0;
+  color: 193446;
+}
+
+.AccordionButton:hover {
+  background-color:transparent;
+  color: #193446;
+  text-decoration: underline;
+  font-size: 13px;
 }

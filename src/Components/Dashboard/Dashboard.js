@@ -11,9 +11,31 @@ export default class Dashboard extends Component {
 
   static contextType = IcebergListContext
 
+  state = {
+    userid: '',
+    username: '',
+  }
+
   componentDidMount() {
     this.context.clearError()
     IcebergApiService.getIcebergs()
+      .then(data => {
+        data.map(results => {
+          this.setState({
+            userid: results.userid - 1
+          })
+          IcebergApiService.getUsers()
+          .then(data => {
+            this.setState({
+              username:(Object.values(data[this.state.userid])[1])
+            })
+            
+          }) 
+          console.log(this.state.userid)
+          console.log(this.state.username)
+        })
+        
+      }) 
       .then(this.context.setIcebergList)
       .catch(this.context.setError)
 
@@ -23,7 +45,6 @@ export default class Dashboard extends Component {
     const { icebergList = [] } = this.context
     return icebergList.map(iceberg =>
       <ArchiveIceberg/>
-      
     )
   }
 
@@ -33,14 +54,13 @@ export default class Dashboard extends Component {
 
   render() {
 
+
     return (
       <main className='Dashboard'>
         <header>
-          {/* TO-DO *** ADD PERSONALIZED USER NAME GREETING {this.props.username} */}
-          <h1>Welcome</h1>
+          <h1>Welcome {this.state.username}</h1>
           <button className="Explore" onClick={this.linkIceberg}>
             New Iceberg
-            {/* <NavLink className="linkButton" to="/iceberg">New Iceberg</NavLink> */}
           </button>
         </header>
 

@@ -13,7 +13,7 @@
 }
 
 a {
-    color: whitesmoke;
+    color: #193446;
 }
 
 .icebergImage {
@@ -23,6 +23,7 @@ a {
     margin:auto;
     margin-top: 25px;
 }
+
 
 .Register {
     border-radius: 10px;

@@ -1,5 +1,5 @@
 input {
-    border: 1px solid whitesmoke;
+    border: 1px solid #193446;
     opacity: .25;
     border-radius: 20px;
     height: 30px;
@@ -9,7 +9,7 @@ input {
 }
 
 input::placeholder {
-   color:  #04312d;
+   color:  #193446;
 }
 
 input:focus {
@@ -31,16 +31,16 @@ input:focus {
 }
 
 button:disabled {
-  border: 1px solid whitesmoke;
-  background-color: whitesmoke;
-  color: #04312d;
+  border: 1px solid #193446;
+  background-color: #193446;
+  color:whitesmoke;
   opacity: .15;
 }
 
 button:disabled:hover {
-    border: 1px solid whitesmoke;
-  background-color: whitesmoke;
-  color: #04312d;
+    border: 1px solid #193446;
+  background-color: #193446;
+  color:whitesmoke;
   opacity: .15;
 }
 

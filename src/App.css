@@ -8,9 +8,9 @@ header {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color:whitesmoke;
+    color:#193446;
     text-align: center;
-    background: linear-gradient( to bottom, #408281, #04312d) fixed;
+    background: linear-gradient( to bottom, #ddeaf3, #889BAA) fixed;
 }
 
 html {
@@ -18,25 +18,22 @@ html {
 }
 
 button {
-    border: 1.5px solid whitesmoke;
+    border: 1.5px solid #193446;
     border-radius: 25px;
     width: 120px;
     height: 40px;
     top: 220px; 
     text-transform: uppercase;
     background: transparent;
-    color:  white;
+    color:  #193446;
     font-size: 14px;
     display: block;
-    /* margin: auto;
-    margin-top: 25px;
-    margin-bottom: 25px; */
 }  
 
 button:hover {
-    background-color: whitesmoke;
+    background-color: #193446;
     opacity: .75;
-    color:  #04312d;
+    color: whitesmoke;
 }
 
 button:focus {
