@@ -32,9 +32,9 @@ const qBank = [
   },
   {
     level: "4. Feelings About Feelings",
-    question: "If the feelings you expressed above were true, what do you think that would mean about you?",
-    TellMeMoreText: "Your feelings are always valid and real, but they are not always true. Give yourself time to think about what expressing your feelings stirs in you.",
-    example: "I felt silly for making such a big deal out of it...",
+    question: "What reaction does expressing your feelings stir in you?",
+    TellMeMoreText: "If the feelings you expressed first were true, what do you think that would mean about you? Your feelings are always valid and real, but they are not always true.",
+    example: "I feel silly for making such a big deal out of it...",
     vocabArray:[ 
       ["Ecstatic", "Thrilled", "Excited"],
       ["Sad", "Happy", "Mad"],
@@ -81,7 +81,7 @@ const qBank = [
   {
     level: "8. Self",
     question: "In light of all this, who are you?",
-    TellMeMoreText: "When faced with the fear that our yearnings might never be met, we often bump into a core false belief about ourselves... When our deepest yearnings are denied, we might assume our needs will never be met. We might fear that connection, affirmation or love will always be outside our grasp. This is not the truth. But it is important to face that fear. Once you have addressed it, respond with a truth. You have immense worth. You are worthy of joy, of connection and purpose. What you yearn for is already available to you.",
+    TellMeMoreText: "When faced with the fear that our yearnings might never be met, we often bump into a core false belief about ourselves... When our deepest yearnings are denied, we might assume our needs will never be met. We might fear that connection, affirmation or love will always be outside our grasp. This is not the truth. But it is important to face that fear.",
     example: "Even if I can't provide for myself, I'm still a valuable person. I don't need to feel ashamed if I can't perform perfectly all the time...",
     vocabArray:[ 
       ["Ecstatic", "Thrilled", "Excited"],

@@ -5,11 +5,12 @@
 
 .IndividualQuestion {
     padding: 9%;
+    padding-bottom: 60px;
     margin-bottom: 40px;
-    background-color: #ddeaf3;
+    background-color: #d9eef1;
+    background-blend-mode: screen;
     border-radius: 10px;
     text-align: left;
-    display: inline-block;
 }
 
 .Questions  h2 {
@@ -33,7 +34,6 @@
 .TellMeMore {
     display: inline;
     text-align: left;
-    color: black;
 }
 
 .Title {
@@ -52,8 +52,8 @@
     top: 220px; 
     margin-top: 15px;
     text-transform: uppercase;
-    color: white;
-    background: #889BAA;
+    color: #193446;
+    background: #b1d6e0;
     float: right;
     font-size: 12px;
 }
@@ -64,8 +64,8 @@
 }
 
 .QandA_Button:hover {
-    opacity: .25;
-    background-color: #889BAA;
+    color: #193446;
+    background-color: #80adb9;
 }
 
 textarea {

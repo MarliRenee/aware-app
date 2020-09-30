@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
 import ValidatedRegistrationForm from '../Login/Register/ValidatedRegistrationForm'
 import './Home.css'
 
@@ -19,7 +18,6 @@ export default class Home extends Component {
           <h3>With eight simple prompts, the Iceberg Model will guide you to greater self-awareness</h3>
               <button className="exploreButton" onClick={this.linkIceberg}>
                 Explore
-                {/* <NavLink className="linkButton" to="/iceberg">explore</NavLink> */}
               </button>
             <img 
               className="icebergImage"
@@ -32,7 +30,7 @@ export default class Home extends Component {
         <section className="About">
           <h2>A cognitive behavioral approach</h2>
           <h3>
-            The Iceberg Model is a eight-step processing tool designed by Virgina Satir. It is used by therapists around the world
+            The Iceberg Model is a processing tool designed by Virgina Satir. It is used by therapists around the world
             to help their clients clarify feelings, find instigating triggers and zero in on core beliefs.
           </h3>
         </section>

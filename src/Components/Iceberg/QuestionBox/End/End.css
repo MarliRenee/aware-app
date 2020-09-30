@@ -1,10 +1,45 @@
+.EndGreeting {
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
+
+.EndText {
+    width: 250px;
+    margin-left: 20px;
+}
+
+.EndText p {
+    margin-top: 0;
+}
+
+.IcebergImage {
+    width: 250px;
+}
+
+.EndImage {
+    width: 100%;
+}
+
+.EndText h1 {
+    margin: 0;
+    text-align: left;
+}
+
+.IcebergImage .icebergImage {
+    width: 100%;
+    margin: 0;
+}
+
 .EndButtons {
     padding: 10px;
     margin: auto;
 }
 
 .EndButtons button {
-    margin: 10px;
+    margin: auto;
     margin-top: 10px;
     width: 200px;
     height: 35px;

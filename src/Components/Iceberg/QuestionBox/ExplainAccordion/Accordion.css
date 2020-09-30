@@ -11,19 +11,34 @@
   border-radius: 10px;
 }
 
-.speech-bubble {
-  background:#9AABB9;
+.first-speech-bubble {
+  background: white;
   border-radius: 4px;
   margin-bottom: 40px;
-  max-width: 300px;
   padding: 15px;
   position: relative;
 }
 
-.speech-bubble-ds__arrow {
-  border-left: 20px solid transparent;
-  border-top: 20px solid  #9AABB9;
-  bottom: -20px;
+.first-speech-bubble-ds__arrow {
+  border-right: 15px solid transparent;
+  border-top: 15px solid  white;
+  bottom: -10px;
+  content: "";
+  position: absolute;
+}
+
+.second-speech-bubble {
+  background:#b1d6e0;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  padding: 15px;
+  position: relative;
+}
+
+.second-speech-bubble-ds__arrow {
+  border-left: 15px solid transparent;
+  border-top: 15px solid  #b1d6e0;
+  bottom: -10px;
   content: "";
   position: absolute;
   right: 20px;
@@ -37,18 +52,17 @@
   color:#193446;
   font-weight: bold;
   text-align: left;
-  text-decoration: underline;
   padding: 0;
+  margin-bottom: 25px;
+  margin-top: 10px;
 }
 
 .AccordionButton button {
   padding: 0;
-  color: 193446;
+  color: #193446;
 }
 
 .AccordionButton:hover {
   background-color:transparent;
   color: #193446;
-  text-decoration: underline;
-  font-size: 13px;
 }

@@ -1,6 +1,9 @@
-#Aware App - React Client
+# Aware App React Client
 
-Welcome to Aware - a cognitive behavioral processing app based on Virginia Satir's iceberg model. 
+Welcome to the client code for Aware - a cognitive behavioral processing app based on Virginia Satir's iceberg model. 
+
+You can check out the live app here: https://aware-app.vercel.app/
+The server code is here: https://github.com/MarliRenee/aware-api/tree/checkpoint6 
 
 Aware is a eight-step processing tool designed to help people articulate the emotions behind stressful or unusual events. Satir's iceberg model has been used by CBT therapists for decades, but now users can independentally work through the questions, save completed processing "icebergs" for later referal, and ditch cluttered homework sheets. And save trees! 
 
