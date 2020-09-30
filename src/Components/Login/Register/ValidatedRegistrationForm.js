@@ -41,15 +41,17 @@ export default function ValidatedRegistrationForm () {
       <h2>Sign-Up</h2>
       <p>Create an account to save your iceberg journey and track patterns over time</p>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username"></label>
+        <label htmlFor="Username"></label>
         <input
+          id="Username"
           type="text"
           placeholder="Username"
           value={username}
           onChange={e => setUsername(e.target.value)}
         />
-        <label htmlFor="password"></label>
+        <label htmlFor="Password"></label>
         <input
+          id="Password"
           value={password}
           placeholder="Password"
           onChange={e => setPassword(e.target.value)}
