@@ -9,6 +9,12 @@ Aware is a eight-step processing tool designed to help people articulate the emo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Screenshots
+![Home Page](https://github.com/MarliRenee/aware-app/blob/styling/src/Assets/Homepage.jpg?raw=true)
+![Login Page](https://github.com/MarliRenee/aware-app/blob/styling/src/Assets/Login.PNG?raw=true)
+![Iceberg Page](https://github.com/MarliRenee/aware-app/blob/styling/src/Assets/IcebergSample.PNG?raw=true)
+![Iceberg Question](https://github.com/MarliRenee/aware-app/blob/styling/src/Assets/QuestionSample.jpg?raw=true)
+
 ## Available Scripts
 
 In the project directory, you can run:
