@@ -50,8 +50,6 @@ class App extends Component {
            
             <PrivateRoute 
               exact path="/dashboard" 
-              // TO-DO *** Discuss with mentor: trying to passs username up to App so I can access it in Dashboard. the below causes errors. 
-              // render={(props) => <Dashboard {...props} username={"test"} />}
               component={Dashboard}   
             />
             <PublicOnlyRoute 

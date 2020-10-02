@@ -44,7 +44,7 @@ const qBank = [
   },
   {
     level: "5. Perceptions",
-    question: "What beliefs, assumptions and values affected how you percieved this situation?",
+    question: "What beliefs, assumptions and values affected how you perceive this situation?",
     TellMeMoreText: "Perceptions are the lens through which we see the world. Consider the outside influences things like your cultural or religious background might have on your perspective.",
     example: "If I'm not pulling my weight, I'm not being a good mom...",
     vocabArray:[ 

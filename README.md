@@ -1,13 +1,31 @@
 # Aware App React Client
 
-Welcome to the client code for Aware - a cognitive behavioral processing app based on Virginia Satir's iceberg model. 
+Welcome to the client code for Aware - a cognitive behavioral processing app based on Virginia Satir's iceberg model. The iceberg model uses simple prompts to guide you to greater emotional awareness.
 
-You can check out the live app here: https://aware-app.vercel.app/
-The server code is here: https://github.com/MarliRenee/aware-api/tree/checkpoint6 
+- View the [live app](https://aware-app.vercel.app/)
+
+- Checkout the [server code](https://github.com/MarliRenee/aware-api/tree/checkpoint6) 
+
+- See the [Kanban board](https://github.com/users/MarliRenee/projects/1) (along with all my day-dreams for the app).
+
+The app was designed for phones, but will scale for desktop viewing.
+
+You can run through a quick "iceberg" processing flow without signing-in, or register to save your progress and review it in the future. 
+
+## Summary
 
 Aware is a eight-step processing tool designed to help people articulate the emotions behind stressful or unusual events. Satir's iceberg model has been used by CBT therapists for decades, but now users can independentally work through the questions, save completed processing "icebergs" for later referal, and ditch cluttered homework sheets. And save trees! 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technology
+<b>Front End</b>
+- React
+    - Create React App
+    - React Router
+- HTML5
+- CSS (from scratch - no frameworks)
+
+<b>Production</b>
+- Deployed via Vercel
 
 ## Screenshots
 ![Home Page](https://github.com/MarliRenee/aware-app/blob/styling/src/Assets/Homepage.jpg?raw=true)
@@ -15,51 +33,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![Iceberg Page](https://github.com/MarliRenee/aware-app/blob/styling/src/Assets/IcebergSample.PNG?raw=true)
 ![Iceberg Question](https://github.com/MarliRenee/aware-app/blob/styling/src/Assets/QuestionSample.jpg?raw=true)
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+Run `npm install` to load dependencies
 
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This is only the front end client, so develop locally you'll need [the backend server](https://github.com/MarliRenee/aware-api/tree/checkpoint6) as well.
