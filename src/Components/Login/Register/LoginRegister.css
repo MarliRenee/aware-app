@@ -1,3 +1,7 @@
+.NoAccount h3 {
+    margin: 5px;
+}
+
 input {
     border: 1px solid #193446;
     opacity: .25;
@@ -50,4 +54,9 @@ button:disabled:hover {
 
 .response {
     margin: 10px;
+}
+
+.Login a {
+    text-decoration: underline;
+    font-weight: 400px;
 }

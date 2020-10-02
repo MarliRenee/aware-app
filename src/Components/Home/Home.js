@@ -35,7 +35,7 @@ export default class Home extends Component {
           </h3>
         </section>
 
-        <section className="Register">
+        <section className="Register" id="Register">
             <ValidatedRegistrationForm />
         </section>
 

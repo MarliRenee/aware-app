@@ -29,6 +29,13 @@ export default function ValidatedRegistrationForm () {
 
   return (
     <div className="Login">
+      <h2>Log In</h2>
+
+      <div className="NoAccount">
+        <h3>Don't have an account yet?</h3>
+        <h3><a href="/#Register">Click here to register</a></h3> 
+      </div>
+      
       <form onSubmit={handleSubmit}>
         <label htmlFor="username"><h3>Username:</h3></label>
         <input
